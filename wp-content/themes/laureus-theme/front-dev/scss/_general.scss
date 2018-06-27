@@ -1,0 +1,191 @@
+//media queries
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$sm-desktop-width}) {
+    @content;
+  }
+}
+
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em
+}
+
+@mixin bdesktop {
+  @media (min-width: #{$big-desktop-width}) {
+    @content;
+  }
+}
+
+@mixin bgcover{
+  background-size: cover;
+  background-position: center center;
+}
+
+@mixin bgparallax{
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center top;
+}
+
+@mixin defdesktop {
+  @media (max-width: #{$big-desktop-width}) { 
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+
+@mixin smdesktop {
+  @media (max-width: #{$desktop-width + 2}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin iphoneV {
+  @media (max-width: 323px) {
+    @content;
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin gradient-line ($bottom, $height) {
+  &::after {
+    content: "";
+    width: 100%;
+    height: $height;
+    bottom: $bottom;
+    left: 0;
+    position: absolute;
+    background-size: 100%;
+    background-image: url('../img/patterns/bg_pattern.png');
+  }
+}
+
+@mixin thePlaceholder ($color) {
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $color;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $color;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $color;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $color;
+  }
+}
+
+
+@mixin fa-icon($ico,$col,$siz) {
+  font-size: $siz;
+  color: $col;
+  content: $ico;
+  font-family: FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@mixin overlay($color,$op){
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color;
+    opacity: $op;
+    z-index: -1;
+  }
+}
+
+@mixin centerer {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+	font-family: $regular;
+  font-size: 16px;
+  a{
+    transition: all 0.3s;
+    &:hover{
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  iframe {
+    max-width: 100%;
+  }
+
+  //Modal sltyle
+  .con-modal {
+    display: none;
+    background-color: rgba(0,0,0,0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    .close-modal {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: em(40);
+      height: em(36);
+      text-align: center;
+      background-color: $black;
+      cursor: pointer;
+      z-index: 9999;
+      i {
+        color: $white;
+        line-height: em(36);
+      }
+    }
+    .wrap-fix {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow-x: auto;
+      figure {
+        position: absolute;
+        padding: em(13);
+        @include centerer;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

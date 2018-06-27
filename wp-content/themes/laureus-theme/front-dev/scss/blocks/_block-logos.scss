@@ -1,0 +1,17 @@
+.logos-wrapper {
+	ul {
+		padding: em(30) 0;
+		text-align: center;
+		li {
+			display: inline-block;
+			margin: 0 em(32); 
+			@include mobile {
+				margin: em(10) auto;
+				display: block;
+			}
+			img {
+				max-width: 100%;
+			}
+		}
+	}	
+}

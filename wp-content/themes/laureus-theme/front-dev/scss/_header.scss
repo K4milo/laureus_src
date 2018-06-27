@@ -1,0 +1,191 @@
+body {
+	.navbar {
+		
+		&.affix{
+			
+			.container-fluid {
+				#navbar {
+					ul {
+						&.menu {
+							li {
+								a {
+									
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.menu-menu-principal-container {
+			@include desktop {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+
+		.container-fluid {
+			position: relative;
+			@include mobile {
+				padding: 0 0 0 0;		
+			}
+			
+			//Social networks
+			.navbar-social {
+				display: none;
+				top: 10px;
+				right: 20px;
+				@include desktop {
+					display: inline-block;
+					vertical-align: top;
+					margin-right: 10px;
+				}
+				.header-social {
+					padding: 0;
+					li{
+						display: inline-block;
+						width: em(30);
+						height: em(30);
+						a {
+							display: block;
+							width: 100%;
+							height: 100%;
+							text-indent: 99999px;
+							background-size: 100% 100%;
+							overflow: hidden;
+						}
+						&.fb {
+							a {
+								background-image: url('../img/svgs/facebook.svg');
+							}
+						}
+						&.ins {
+							a {
+								background-image: url('../img/svgs/instagram.svg');
+							}
+						}
+						&.tw {
+							a {
+								background-image: url('../img/svgs/twitter.svg');
+							}
+						}
+						&.yt {
+							a {
+								background-image: url('../img/svgs/youtube.svg');
+							}
+						}
+					}
+				}
+			}
+
+			//logo
+			.navbar-header {
+				margin: 0 0 16px 0;
+				@include desktop {
+					float: none;
+					display: inline-block;
+					vertical-align: middle;
+					margin: 45px 0 0 60px;
+				}
+				.navbar-brand {
+					float: none;
+					display: block;
+					width: 147px;
+					height: 133px;
+					background-image: url('../img/logos/logo.png');
+					background-size: contain;
+					background-repeat: no-repeat;
+					text-indent: -9999999px; 
+					padding: 0;
+					margin: 0;
+					@include mobile {
+						width: 107px;
+						height: 93px;
+					}
+				}
+			}
+			//menu
+			#navbar {
+				vertical-align: middle;
+				width: 100%;
+				text-align: center;
+				@include mobile {
+					width: 100%;
+					text-align: center;
+					margin: 0;
+					padding: 0;
+					background-color: $black; 
+				}
+
+				@include tablet {
+					display: inline-block !important;
+					width: 80%;
+				}
+				@include desktop {
+					display: inline-block !important;
+					width: 82%;
+					margin-top: 44px;
+					text-align: right;
+				}
+				ul {
+					@include desktop {
+						text-align: right;
+					}
+					&.navbar-nav {
+						padding: 0;
+						margin: 0;
+						list-style: none;
+						float: none;
+						@include tablet {
+							display: inline-block;
+							vertical-align: middle;
+						}
+						@include desktop {
+							display: inline-block;
+							vertical-align: middle;
+							text-align: right;
+						}
+						li {
+							float: none;
+							@include desktop {
+								display: inline-block;
+								vertical-align: top;
+							}
+							@include tablet {
+								display: inline-block;
+								vertical-align: middle;
+							}
+							a {
+								display: block;
+								color: $white;
+								position: relative;
+								font-size: em(13);
+								text-align: center;
+								padding: em(10) em(12);
+								transition: all 0.3s;
+								text-transform: uppercase;
+								&:hover {
+									background-color: $black;
+									color: $white;
+									border-color: $red;
+								}
+								@include tablet {
+									padding: em(10);
+								}
+								@include mobile {
+									padding: em(12);
+								}
+							}
+							&.active  {
+								a {
+									background: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
