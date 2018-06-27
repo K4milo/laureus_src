@@ -16,7 +16,7 @@
 </div>
 <![endif]-->
 
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-static-top main-navigation">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -25,20 +25,30 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
+      <a class="navbar-brand visible-xs logo-mobile" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
     </div>
     <div class="collapse navbar-collapse" id="navbar">
+      <?php
+      //Menu Call
+        wp_nav_menu( 
+          array(
+            'theme_location'    => 'navbar-top',
+            'menu_class'        => 'nav navbar-side'
+          )
+        );
+      ?>
 
+      <a class="navbar-brand logo-desktop" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
       <?php
 			//Menu Call
-			wp_nav_menu( 
-				array(
-					'theme_location'    => 'navbar-main',
-					'depth'             => 2,
-					'menu_class'        => 'nav navbar-nav'
-				)
-			);
-        ?>
+        wp_nav_menu( 
+  				array(
+  					'theme_location'    => 'navbar-main',
+  					'depth'             => 2,
+  					'menu_class'        => 'nav navbar-nav'
+  				)
+  			);
+      ?>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->
 </nav>
