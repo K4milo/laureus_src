@@ -1,0 +1,56 @@
+.hero-home-block {
+	position: relative;
+	height: 100vh;
+	background-color: $marine-dk;
+	&::after {
+		content: "";
+		position: absolute; 
+		width: 100%;
+		height: 100%;
+		background-image: url('../img/misc/pattern-hero.png');
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.hero-caption {
+		position: absolute;
+		max-width: em(586);
+		width: 90%;
+		text-align: center;
+		color: $white;
+		z-index: 1;
+		@include centerer;
+
+		h2 {
+			font-size: em(18);
+			text-transform: uppercase;
+			@include desktop {
+				font-size: em(20);
+			}
+		}
+		h3 {
+			font-size: em(30);
+			font-family: $bold;	
+			@include desktop {
+				font-size: em(60);
+			}	
+		}
+		p {
+			font-size: em(18);
+		}
+		.green-cta {
+			margin: em(30) auto;
+		}
+	}
+	.bottom-scroll {
+		width: 100%;
+		position: absolute;
+		bottom: em(84);
+		text-align: center;
+		letter-spacing: 3px;
+		font-size: em(18);
+		text-transform: uppercase;
+		font-family: $bold;	
+		color: $white;
+		z-index: 1;
+	}
+}

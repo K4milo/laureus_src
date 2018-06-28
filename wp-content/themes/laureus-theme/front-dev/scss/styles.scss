@@ -23,6 +23,11 @@
 //loops
 //@import "loops/_loop-posts";
 
-
-//Blocks
+// Universal Blocks
 @import "blocks/commons/_block-logos";
+
+
+//Blocks Home
+@import "blocks/home/_block-hero";
+@import "blocks/home/_block-story";
+@import "blocks/home/_block-portfolio";

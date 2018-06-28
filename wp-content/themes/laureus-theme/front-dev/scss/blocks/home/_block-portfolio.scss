@@ -1,0 +1,99 @@
+.portfolio-home-block {
+	background-color: $dblue;
+	position: relative;
+	.container {
+		min-height: em(610);
+		.side-portfolio {
+			display: block;
+			padding: em(25);
+			text-align: center;
+			color: $white;
+			@include desktop {
+				width: 49%;
+				padding-top: em(108);
+				display: inline-block;
+				vertical-align: top;
+			}
+			&.text-wrapper {
+				@include desktop {
+					text-align: left;
+				}
+				h2 {
+					line-height: 1;
+					margin: 0;
+					font-size: em(20);
+					font-family: $bold; 
+				}
+				h3 {
+					line-height: 1;
+					position: relative;
+					margin-top: 0;
+					font-size: em(30);
+					font-family: $bold;
+					padding-bottom: em(6);
+					@include desktop {
+						font-size: em(60);
+					}
+					&::after {
+						content: "";
+						display: block;
+						width: 104px;
+						height: 6px;
+						background-color: $marine;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+					}
+				}
+				p {
+					margin-top: em(30);
+					font-family: $book;
+					font-size: em(14);
+				}
+			}
+			
+			// SIDE LIST
+			&.items-wrapper {
+				overflow: hidden;
+				ul {
+					max-width: em(385);
+					width: 100%;
+					margin: 0 auto;
+					display: block;
+					@include desktop {
+						float: right;
+					}
+					li {
+						overflow: hidden;
+						display: block;
+						margin-bottom: em(60);
+						img {
+							float: left;
+						}
+						span {
+							display: block;
+							text-align: right;
+							h4 {
+								line-height: 1;
+								margin: 0;
+								font-size: em(20);
+								font-family: $bold;
+								color: $crygr; 
+							}
+							h5 {
+								line-height: 1;
+								position: relative;
+								margin-top: 0;
+								font-size: em(30);
+								font-family: $bold;
+								@include desktop {
+									font-size: em(50);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

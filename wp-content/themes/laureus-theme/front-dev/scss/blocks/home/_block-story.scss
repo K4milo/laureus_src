@@ -1,0 +1,88 @@
+.story-home-block {
+	height: 100vh;
+	display: block;
+	@include desktop {
+		height: em(900);
+		display: flex;
+	}
+	.side-story {
+		position: relative;
+		@include desktop {
+			width: 50%;
+			height: 100vh;
+		}
+		&.video-wrapper {
+			background-size: cover;
+			background-position: center center;
+			height: 100vh;
+			a {
+				&.play-icon {
+					position: absolute;
+					display: block;
+					@include centerer;
+					width: em(154);
+					height: em(157);
+					background-image: url('../img/icons/play-icon.png');
+				}
+			}
+		}
+		&.text-wrapper { 
+			padding: em(42);
+			.text-content {
+				width: 90%;
+				max-width: em(438);
+				@include desktop {
+					position: absolute;
+					@include centererY; 
+				}
+				h2 {
+					line-height: 1;
+					margin: 0;
+					color: $dblue;
+					font-size: em(20);
+					font-family: $bold;
+				}
+				h3 {
+					line-height: 1;
+					color: $dblue;
+					margin-top: 0;
+					font-size: em(40);
+					font-family: $bold;
+					@include desktop {
+						font-size: em(80);
+					}
+				}
+				p {
+					font-family: $book;
+					font-size: em(14);
+				}
+				.bottom-links {
+					ul {
+						padding: em(34) 0 0;
+						li {
+							display: inline-block;
+							border-right: 1px solid $txtgrey;
+							a {
+								font-family: $book;
+								font-size: em(14);
+								padding: 0 em(20);
+								color: $txtgrey;
+							}
+							&:first-child{
+								a {
+									padding-left: 0;
+								}
+							}
+							&:last-child{
+								border-right: none;
+								a {
+									padding-right: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
+}

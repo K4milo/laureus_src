@@ -2,20 +2,22 @@
 
 // Custom post types creation
 function create_posttype() {
+
+     ////////////////////
+    // POST TYPES
+    ///////////////////
     
-    //Post Type Beneficiaries
+    //Post Type Ambassadors
 
-    /*
-
-    register_post_type( 'beneficiaries',
+    register_post_type( 'ambassadors',
     // CPT Options
         array(
             'labels' => array(
-                'name' => __( 'Beneficiaries' ),
-                'singular_name' => __( 'Beneficiary' )
+                'name' => __( 'Ambassadors' ),
+                'singular_name' => __( 'Ambassador' )
             ),
-            'rewrite' => array('slug' => 'beneficiary'),
-            'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields'),
+            'rewrite' => array('slug' => 'ambassador'),
+            'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields'),
             'public' => true,
             'hierarchical'        => false,
             'show_ui'             => true,
@@ -31,27 +33,28 @@ function create_posttype() {
         )
     );
 
-    /////////
-    // TAXONOMIES
-    /////////
-
     
 
+    ////////////////////
+    // TAXONOMIES
+    ///////////////////
+
+
     $media_labels = array(
-        'name' => _x( 'Media Years', 'type of media' ),
-        'singular_name' => _x( 'Media Year', 'type media' ),
-        'search_items' =>  __( 'Search Media Years' ),
-        'all_items' => __( 'All Media Years' ),
-        'parent_item' => __( 'Parent Media Year' ),
+        'name' => _x( 'Ambassador Types', 'type of Ambassadors' ),
+        'singular_name' => _x( 'Ambassador Type', 'type media' ),
+        'search_items' =>  __( 'Search Ambassador Types' ),
+        'all_items' => __( 'All Ambassador Types' ),
+        'parent_item' => __( 'Parent Ambassador Type' ),
         'parent_item_colon' => __( 'Parent Type:' ),
         'edit_item' => __( 'Edit Type' ), 
-        'update_item' => __( 'Update Year' ),
-        'add_new_item' => __( 'Add New Year' ),
+        'update_item' => __( 'Update Ambassador Type' ),
+        'add_new_item' => __( 'Add New Ambassador Type' ),
         'new_item_name' => __( 'New Type Number' ),
-        'menu_name' => __( 'Media Years' ),
+        'menu_name' => __( 'Ambassador Type' ),
     ); 
 
-    register_taxonomy('media_year',array('multimedia'), array(
+    register_taxonomy('ambassador_type',array('ambassadors'), array(
         'hierarchical' => true,
         'labels' => $media_labels,
         'show_ui' => true,
@@ -60,10 +63,8 @@ function create_posttype() {
         'rest_base' => 'media-year',
         'rest_controller_class' => 'WP_REST_Terms_Controller',
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'media-year' ),
+        'rewrite' => array( 'slug' => 'ambassador-type' ),
     ));  
-
-    */ 
 
 }
 // Hooking up our function to theme setup

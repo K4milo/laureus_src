@@ -12,6 +12,10 @@ body {
 				// Min Navigation styles
 				#navbar {
 					//left menu
+					@include desktop {
+						text-align: center;
+						padding-top: em(20);
+					}
 					.menu-slide-links-menu-container {
 						display: block;
 						@include desktop {
@@ -26,7 +30,7 @@ body {
 								}
 								a {
 									display: block;
-									padding: 20px;
+									padding: em(20);
 									text-align: center;
 								}
 								&:first-child {
@@ -59,6 +63,9 @@ body {
 							display: inline-block;
 							margin: 0 84px;
 						}
+						@mixin smdesktop {
+							margin: 0 34px;	
+						}
 
 					}
 				
@@ -78,7 +85,15 @@ body {
 									a {
 										color: $white;
 										text-align: center;
-										padding: 10px 15px;
+										padding: 0 em(10);
+										@include desktop {
+											border-right: 1px solid $white;
+										}
+									}
+									&:last-child {
+										a {
+											border-right: none;	
+										}
 									}
 								}
 							}
