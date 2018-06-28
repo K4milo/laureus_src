@@ -20,6 +20,12 @@
       // Ambassadors
       get_template_part('includes/loops/loop-carousel-ambassadors');
 
+      // Involved
+      get_template_part('includes/template-parts/home/block-home','involved');
+
+      // loop posts
+      get_template_part('includes/loops/loop-news-blocks');
+
   	endwhile;
 
   get_footer(); ?>

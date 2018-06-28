@@ -1,0 +1,123 @@
+.beneficiaries-carousel {
+	padding: em(28) 0;
+	@include desktop {
+		padding: em(78) 0;
+	}
+	h3 {
+		font-size: 30px;
+		display: block;
+		color: $dblue;
+		line-height: 1;
+		font-family: $bold;
+		padding-bottom: 20px;
+		margin-bottom: 30px;
+		position: relative;
+		@include desktop {
+			font-size: 60px;
+		}
+		span {
+			font-size: 20px;
+			display: block;
+		}
+		&::after {
+			content: "";
+			display: block;
+			width: 104px;
+			height: 6px;
+			background-color: $marine;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+	}
+	
+	// Light carousel
+	.light-carousel {
+		.carousel-item  {
+			position: relative;
+			padding: 0 em(10);
+			.inner-wrapper {
+				position: relative;
+				margin: em(5);
+				min-height: em(400);
+				padding-bottom: em(40);
+				tranition: all 0.4s;
+				@include desktop {
+					min-height: em(460);
+				}
+				&:hover {
+					border-bottom: 3px solid $marine;
+					box-shadow: 0 0 em(5) $lgrey;
+					a {
+						display: block;
+					}
+				}
+			}
+			figure {
+				display: block;
+				background-size: cover;
+				background-position: top center;
+				width: 100%;
+				height: em(185);
+				margin: 0 auto;
+			}
+			h4{
+				color: $dblue;
+				font-size: em(18);
+				font-family: $bold;
+				padding:0 em(10);
+			}
+			p {
+				font-family: $book;
+				font-size: em(14);
+				padding:0 em(10);
+			}
+			a {
+				display: none;
+				position: absolute;
+				bottom: em(6);
+				left: 0;
+				width: 100%;
+				color: $dblue;
+				font-family: $bold;
+				font-size: em(14);
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				text-align: center;
+			}
+		}
+	
+		// dots
+		.slick-dots {
+		    bottom: -45px;
+		    li {
+		        position: relative;
+		        display: inline-block;
+		        height: 10px;
+		        width: 10px;
+		        button {
+		            height: 10px;
+		            width: 10px;
+		            background-color: rgba(255,255,255,0.4);
+		            border: 1px solid $dblue;
+		            padding: 5px;
+		            cursor: pointer;
+		            text-indent: -9999999px;
+		            border-radius: em(10);
+		            &:hover, &:focus {
+		                outline: none;
+		                &:before {
+		                    display: none;
+		                }
+		            }
+		        }
+		        &.slick-active {
+		            button {
+		                background-color: $dblue;
+		            }
+		        }
+		    }
+		}
+
+	}
+}

@@ -18,10 +18,13 @@
 
 			?>
 			<div class="carousel-item ambassador-carousel__item">
-				<figure class="thumb" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')"></figure>
-				<h4><?php the_title();?></h4>
-				<?php the_excerpt();?>
-				<a href="#">View more</a>
+				
+				<div class="inner-wrapper">
+					<figure class="thumb" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')"></figure>
+					<h4><?php the_title();?></h4>
+					<?php the_excerpt();?>
+					<a href="#">View more</a>
+				</div>
 			</div>
 
 			<?php 

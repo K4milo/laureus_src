@@ -1,0 +1,99 @@
+.news-grid {
+	background-image: url('../img/bg/blue-pattern.jpg');
+	padding: em(40) 0;
+	@include desktop {
+		padding: em(140) 0;
+	}
+	.container {
+		@include desktop {
+			overflow: hidden;
+		}
+		h3 {
+			font-size: 30px;
+			display: block;
+			color: $cream;
+			line-height: 1;
+			font-family: $bold;
+			padding-bottom: 20px;
+			@include desktop {
+				font-size: 60px;
+			}
+			span {
+				font-size: 20px;
+				display: block;
+			}
+		}
+
+		.news-wrapper{
+			@include desktop {
+				overflow: hidden;
+			}
+			.news-item {
+				display: block;
+				@include desktop {
+					width: 50%;
+					float: left;
+				}
+				figure {
+					display: block;
+					width: 100%;
+					height: em(250);
+					background-size: cover;
+					background-position: top center;
+					margin: 0 0 0 0;
+				}
+				.content-wrapper {
+					position: relative;
+					background-color: $cream;
+					min-height: em(250);
+					padding: em(30);
+					h4 {
+						font-size: em(16);
+						font-family: $bold;
+						color: $dblue;
+					}
+					p {
+						font-family: $book;
+						font-size: em(12);
+					}
+				}
+				&.item__1 {
+					@include desktop {
+						overflow: hidden;
+						height: em(500);
+						figure,
+						.content-wrapper {
+							width: 50%;
+							float: left;
+							height: em(500);
+						}
+					}
+				}
+				&.item__2 {
+					@include desktop {
+						overflow: hidden;
+						height: em(250);
+						figure,
+						.content-wrapper {
+							width: 50%;
+							float: left;
+							height: em(250);
+						}
+					}
+				}
+				&.item__3 {
+					@include desktop {
+						overflow: hidden;
+						heigth: em(250);
+						figure,
+						.content-wrapper {
+							width: 50%;
+							float: right;
+							heigth: em(250);
+						}
+					}
+				}
+			}
+		}
+	}
+}
