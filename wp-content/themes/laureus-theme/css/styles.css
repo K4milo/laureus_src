@@ -2798,6 +2798,102 @@ body .navbar.main-navigation {
       .beneficiaries-carousel .light-carousel .slick-dots li.slick-active button {
         background-color: #001440; }
 
+.testimonials-carousel {
+  padding: 1.75em 0;
+  background-color: #001440; }
+  @media (min-width: 1200px) {
+    .testimonials-carousel {
+      padding: 4.875em 0; } }
+  .testimonials-carousel > h3 {
+    font-size: 30px;
+    display: block;
+    color: #ffffff;
+    line-height: 1;
+    font-family: "Gotham Bold";
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    text-align: center; }
+    @media (min-width: 1200px) {
+      .testimonials-carousel > h3 {
+        font-size: 60px; } }
+    .testimonials-carousel > h3 span {
+      font-size: 20px;
+      display: block; }
+    .testimonials-carousel > h3::after {
+      content: "";
+      display: block;
+      width: 104px;
+      height: 6px;
+      background-color: #D4D743;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -52px; }
+  .testimonials-carousel .dark-carousel .slick-slide {
+    opacity: 0.6; }
+    .testimonials-carousel .dark-carousel .slick-slide .carousel-item .inner-wrapper figure span.photo {
+      width: 7.1875em;
+      height: 7.1875em; }
+    .testimonials-carousel .dark-carousel .slick-slide.slick-center {
+      opacity: 1; }
+      .testimonials-carousel .dark-carousel .slick-slide.slick-center .carousel-item .inner-wrapper figure span.photo {
+        width: 9.0625em;
+        height: 9.0625em; }
+  .testimonials-carousel .dark-carousel .carousel-item {
+    position: relative;
+    padding: 0 0.625em; }
+    .testimonials-carousel .dark-carousel .carousel-item .inner-wrapper {
+      color: #ffffff;
+      text-align: center; }
+      .testimonials-carousel .dark-carousel .carousel-item .inner-wrapper figure {
+        text-align: center;
+        position: relative; }
+        .testimonials-carousel .dark-carousel .carousel-item .inner-wrapper figure span {
+          display: inline-block; }
+          .testimonials-carousel .dark-carousel .carousel-item .inner-wrapper figure span.quote-left {
+            position: absolute;
+            top: 0;
+            left: 0; }
+          .testimonials-carousel .dark-carousel .carousel-item .inner-wrapper figure span.photo {
+            border: 0.125em solid #ffffff;
+            border-radius: 100%; }
+          .testimonials-carousel .dark-carousel .carousel-item .inner-wrapper figure span.quote-right {
+            position: absolute;
+            bottom: 0;
+            right: 0; }
+      .testimonials-carousel .dark-carousel .carousel-item .inner-wrapper h3, .testimonials-carousel .dark-carousel .carousel-item .inner-wrapper h4 {
+        font-family: "Gotham Bold";
+        color: #D4D743; }
+      .testimonials-carousel .dark-carousel .carousel-item .inner-wrapper h4 {
+        font-size: 0.625em; }
+      .testimonials-carousel .dark-carousel .carousel-item .inner-wrapper p {
+        font-family: "Gotham Book";
+        font-size: 0.75em;
+        padding: 0 0.625em; }
+  .testimonials-carousel .dark-carousel .slick-dots {
+    bottom: -45px; }
+    .testimonials-carousel .dark-carousel .slick-dots li {
+      position: relative;
+      display: inline-block;
+      height: 10px;
+      width: 10px; }
+      .testimonials-carousel .dark-carousel .slick-dots li button {
+        height: 10px;
+        width: 10px;
+        background-color: rgba(255, 255, 255, 0.4);
+        border: 1px solid #ffffff;
+        padding: 5px;
+        cursor: pointer;
+        text-indent: -9999999px;
+        border-radius: 0.625em; }
+        .testimonials-carousel .dark-carousel .slick-dots li button:hover, .testimonials-carousel .dark-carousel .slick-dots li button:focus {
+          outline: none; }
+          .testimonials-carousel .dark-carousel .slick-dots li button:hover:before, .testimonials-carousel .dark-carousel .slick-dots li button:focus:before {
+            display: none; }
+      .testimonials-carousel .dark-carousel .slick-dots li.slick-active button {
+        background-color: #ffffff; }
+
 .news-grid {
   background-image: url("../img/bg/blue-pattern.jpg");
   padding: 2.5em 0; }

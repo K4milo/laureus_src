@@ -1,0 +1,146 @@
+.testimonials-carousel {
+	padding: em(28) 0;
+	background-color: $dblue;
+	@include desktop {
+		padding: em(78) 0;
+	}
+	> h3 {
+		font-size: 30px;
+		display: block;
+		color: $white;
+		line-height: 1;
+		font-family: $bold;
+		padding-bottom: 20px;
+		margin-bottom: 30px;
+		position: relative;
+		text-align: center;
+		@include desktop {
+			font-size: 60px;
+		}
+		span {
+			font-size: 20px;
+			display: block;
+		}
+		&::after {
+			content: "";
+			display: block;
+			width: 104px;
+			height: 6px;
+			background-color: $crygr;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			margin-left: -52px;
+		}
+	}
+	
+	// Light carousel
+	.dark-carousel {
+
+		.slick-slide {
+			opacity: 0.6;
+			.carousel-item {
+				.inner-wrapper {
+					figure {
+						span {
+							&.photo {
+								width: em(115);
+								height: em(115);
+							}
+						}
+					}
+				}
+			}
+			&.slick-center {
+				opacity: 1;
+				.carousel-item {
+					.inner-wrapper {
+						figure {
+							span {
+								&.photo {
+									width: em(145);
+									height: em(145);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.carousel-item {
+			position: relative;
+			padding: 0 em(10);
+			.inner-wrapper {
+				color: $white;
+				text-align: center;
+				figure {
+					text-align: center;
+					position: relative;
+					span {
+						display: inline-block;
+						&.quote-left{
+							position: absolute;
+							top: 0;
+							left: 0;
+						}
+						&.photo {
+							border: em(2) solid $white;
+							border-radius: 100%;
+						}
+						&.quote-right{
+							position: absolute;
+							bottom: 0;
+							right: 0;
+						}
+					}
+				}
+				h3,h4{
+					font-family: $bold;
+					color: $crygr;
+				}
+				h4 {
+					font-size: em(10);
+				}
+				p {
+					font-family: $book;
+					font-size: em(12);
+					padding:0 em(10);
+				}
+			}
+		}
+	
+		// dots
+		.slick-dots {
+		    bottom: -45px;
+		    li {
+		        position: relative;
+		        display: inline-block;
+		        height: 10px;
+		        width: 10px;
+		        button {
+		            height: 10px;
+		            width: 10px;
+		            background-color: rgba(255,255,255,0.4);
+		            border: 1px solid $white;
+		            padding: 5px;
+		            cursor: pointer;
+		            text-indent: -9999999px;
+		            border-radius: em(10);
+		            &:hover, &:focus {
+		                outline: none;
+		                &:before {
+		                    display: none;
+		                }
+		            }
+		        }
+		        &.slick-active {
+		            button {
+		                background-color: $white;
+		            }
+		        }
+		    }
+		}
+
+	}
+}

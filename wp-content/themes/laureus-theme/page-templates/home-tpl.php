@@ -26,6 +26,9 @@
       // loop posts
       get_template_part('includes/loops/loop-news-blocks');
 
+      // Testimonials
+      get_template_part('includes/loops/loop-carousel-testimonials');
+
   	endwhile;
 
   get_footer(); ?>
