@@ -34,7 +34,6 @@ function create_posttype() {
     );
 
     
-
     ////////////////////
     // TAXONOMIES
     ///////////////////

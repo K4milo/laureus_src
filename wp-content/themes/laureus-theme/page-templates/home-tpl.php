@@ -17,6 +17,9 @@
   		// portfolio banner
   		get_template_part('includes/template-parts/home/block-home','portfolio');
 
+      // Ambassadors
+      get_template_part('includes/loops/loop-carousel-ambassadors');
+
   	endwhile;
 
   get_footer(); ?>
