@@ -1,7 +1,7 @@
 <div id="TestimonialsSection" class="container-fluid">
 	<div class="row testimonials-carousel">
 		<h3><span>Testimonials from youth,</span>Coaches and Stakeholders</h3>
-		<div class="container">
+		<div class="containerr">
 			<div class="carosel-wrapper dark-carousel">
 				<?php
 

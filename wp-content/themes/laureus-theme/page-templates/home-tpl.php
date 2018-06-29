@@ -29,6 +29,12 @@
       // Testimonials
       get_template_part('includes/loops/loop-carousel-testimonials');
 
+      // Patrons inline
+      get_template_part('includes/loops/loop-patrons-inline');
+
+      // Prefooter
+      get_template_part('includes/common/common','prefooter');
+
   	endwhile;
 
   get_footer(); ?>

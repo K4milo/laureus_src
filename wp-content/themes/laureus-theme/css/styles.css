@@ -2502,6 +2502,57 @@ body .navbar.main-navigation {
         body .navbar.main-navigation .container-fluid #navbar .menu-main-navigation-container ul.nav li:last-child a {
           border-right: none; }
 
+footer {
+  background-color: #001440;
+  padding: 1.875em 0;
+  text-align: center;
+  border-top: 1px solid #ffffff; }
+  @media (min-width: 1200px) {
+    footer {
+      padding: 5em 0; } }
+  footer .footer-section {
+    display: block;
+    text-align: center; }
+    @media (min-width: 1200px) {
+      footer .footer-section {
+        display: inline-block;
+        text-align: left; } }
+    @media (min-width: 1200px) {
+      footer .footer-section.brand {
+        width: 20%; } }
+    footer .footer-section.brand img {
+      display: inline-block;
+      max-width: 100%; }
+    @media (min-width: 1200px) {
+      footer .footer-section.sitemap {
+        width: 58%; } }
+    footer .footer-section.sitemap ul {
+      padding: 0;
+      text-align: center; }
+      @media (min-width: 1200px) {
+        footer .footer-section.sitemap ul {
+          text-align: left; } }
+      footer .footer-section.sitemap ul li {
+        display: block; }
+        @media (min-width: 1200px) {
+          footer .footer-section.sitemap ul li {
+            display: inline-block;
+            margin-right: 5em; } }
+        footer .footer-section.sitemap ul li a {
+          color: #ffffff;
+          font-family: "Gotham Book";
+          font-size: 1.125em; }
+      footer .footer-section.sitemap ul > li a {
+        font-family: "Gotham Bold"; }
+    footer .footer-section.secondary-menu .green-btn {
+      display: inline-block;
+      color: #001440;
+      background-color: #D4D743;
+      font-family: "Gotham Bold";
+      font-size: 0.875em;
+      text-align: center;
+      padding: 0.9375em 1.5625em; }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -2972,6 +3023,51 @@ body .navbar.main-navigation {
           float: right;
           heigth: 15.625em; } }
 
+.patrons-inline {
+  text-align: center; }
+  .patrons-inline ul {
+    text-align: center;
+    padding: 1.875em 0; }
+    @media (min-width: 1200px) {
+      .patrons-inline ul {
+        padding: 5.1875em 0; } }
+    .patrons-inline ul li {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 2.5em;
+      font-family: "Gotham Book";
+      font-size: 1.125em; }
+
+.follow-block {
+  background-color: #001440;
+  padding: 1.875em 0;
+  text-align: center; }
+  @media (min-width: 1200px) {
+    .follow-block {
+      padding: 3.125em 0; } }
+  .follow-block h3 {
+    color: #ffffff;
+    font-size: 1.25em;
+    font-family: "Gotham Bold"; }
+  .follow-block ul {
+    padding: 0.9375em 0;
+    text-align: center; }
+    .follow-block ul li {
+      display: inline-block; }
+      .follow-block ul li a {
+        color: #ffffff;
+        padding: 0 12px; }
+        .follow-block ul li a:hover {
+          color: #D4D743; }
+        .follow-block ul li a i {
+          font-size: 30px; }
+          @media (min-width: 1200px) {
+            .follow-block ul li a i {
+              font-size: 35px; } }
+        @media (min-width: 1200px) {
+          .follow-block ul li a {
+            padding: 0 20px; } }
+
 .hero-home-block {
   position: relative;
   height: 100vh;
@@ -3207,7 +3303,8 @@ body .navbar.main-navigation {
       left: 0; }
   .involved-home-block ul {
     display: block;
-    padding: 0; }
+    padding: 0;
+    margin: 0; }
     @media (min-width: 1200px) {
       .involved-home-block ul {
         display: flex; } }

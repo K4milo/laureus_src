@@ -1,3 +1,67 @@
 footer {
-	
+	background-color: $dblue;
+	padding: em(30) 0;
+	text-align: center;
+	border-top: 1px solid $white;
+	@include desktop {
+		padding: em(80) 0;
+	}
+
+	.footer-section {
+		display: block;
+		text-align: center;
+		@include desktop {
+			display: inline-block;
+			text-align: left;
+		}
+		&.brand {
+			@include desktop {
+				width: 20%;
+			}
+			img {
+				display: inline-block;
+				max-width: 100%;
+			}
+		}
+		&.sitemap {
+			@include desktop {
+				width: 58%;
+			}
+			ul {
+				padding: 0;
+				text-align: center;
+				@include desktop {
+					text-align: left;
+				}
+				li {
+					display: block;
+					@include desktop {
+						display: inline-block;
+						margin-right: em(80);
+					}
+					a {
+						color: $white;
+						font-family: $book;
+						font-size: em(18)
+					}
+				}
+				> li {
+					a {
+						font-family: $bold;
+					}
+				}
+			}
+		}
+		&.secondary-menu {
+			.green-btn {
+				display: inline-block;
+				color: $dblue;
+				background-color: $crygr;
+				font-family: $bold;
+				font-size: em(14);
+				text-align: center;
+				padding: em(15) em(25);
+			}
+		}
+	}
 }

@@ -1,0 +1,17 @@
+.patrons-inline {
+	text-align: center;
+	ul {
+		text-align: center;
+		padding: em(30) 0;
+		@include desktop {
+			padding: em(83) 0;
+		}
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 em(40);
+			font-family: $book;
+			font-size: em(18);
+		}
+	}
+}

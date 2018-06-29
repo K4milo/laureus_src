@@ -71,7 +71,7 @@ function laureus_options() {
 
 	add_settings_section(
 		"section-social", 
-		"RBC Social Settings", 
+		"Social Settings", 
 		'laureus_social_callback', 
 		"theme-social-options"
 	);
@@ -90,12 +90,29 @@ function laureus_options() {
     	"display_twitter_element", 
     	"theme-social-options", 
 		"section-social"
-    );	
+    );
+
+    add_settings_field(
+        "instagram_url", 
+        "Instagram Url", 
+        "display_instagram_element", 
+        "theme-social-options", 
+        "section-social"
+    ); 
+
+    add_settings_field(
+        "youtube_url", 
+        "Youtube Url", 
+        "display_youtube_element", 
+        "theme-social-options", 
+        "section-social"
+    );  	
 
 
     register_setting("theme-social-options", "facebook_url");
     register_setting("theme-social-options", "twitter_url");
-
+    register_setting("theme-social-options", "instagram_url");
+    register_setting("theme-social-options", "youtube_url");
 
 }
 
@@ -126,6 +143,20 @@ function display_twitter_element()
     <?php
 }
 
+function display_instagram_element()
+{
+    ?>
+        <input type="text" name="instagram_url" id="instagram_url" value="<?php echo get_option('instagram_url'); ?>" />
+    <?php
+}
+
+function display_youtube_element()
+{
+    ?>
+        <input type="text" name="youtube_url" id="youtube_url" value="<?php echo get_option('youtube_url'); ?>" />
+    <?php
+}
+
 
 
 
@@ -139,11 +170,10 @@ function laureus_index() {
         <?php settings_errors(); ?>  
 
         <?php  
-            $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'theme-topbar-options';  
+            $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'theme-social-options';  
         ?>  
 
         <h2 class="nav-tab-wrapper">  
-          
             <a href="?page=theme-panel&tab=theme-social-options" class="nav-tab <?php echo $active_tab == 'theme-social-options' ? 'nav-tab-active' : ''; ?>">Social Settings</a>
         </h2>  
 

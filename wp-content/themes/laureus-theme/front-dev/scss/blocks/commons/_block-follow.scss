@@ -1,0 +1,36 @@
+.follow-block {
+	background-color: $dblue;
+	padding: em(30) 0;
+	text-align: center;
+	@include desktop {
+		padding: em(50) 0;
+	}
+	h3 {
+		color: $white;
+		font-size: em(20);
+		font-family: $bold;
+	}
+	ul {
+		padding: em(15) 0;
+		text-align: center;
+		li {
+			display: inline-block;
+			a {
+				color: $white;
+				padding: 0 12px;
+				&:hover {
+					color: $crygr;
+				}
+				i {
+					font-size: 30px;
+					@include desktop {
+						font-size: 35px;
+					} 
+				}
+				@include desktop {
+					padding: 0 20px;
+				}
+			}
+		}
+	}
+}

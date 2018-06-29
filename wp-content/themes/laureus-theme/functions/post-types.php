@@ -17,7 +17,7 @@ function create_posttype() {
                 'singular_name' => __( 'Ambassador' )
             ),
             'rewrite' => array('slug' => 'ambassador'),
-            'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields'),
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields'),
             'public' => true,
             'hierarchical'        => false,
             'show_ui'             => true,
@@ -43,7 +43,7 @@ function create_posttype() {
                 'singular_name' => __( 'Testimonial' )
             ),
             'rewrite' => array('slug' => 'testimonials'),
-            'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields'),
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields'),
             'public' => true,
             'hierarchical'        => false,
             'show_ui'             => true,
@@ -51,6 +51,58 @@ function create_posttype() {
             'show_in_nav_menus'   => true,
             'show_in_admin_bar'   => true,
             'menu_position'       => 6,
+            'can_export'          => true,
+            'has_archive'         => false,
+            'exclude_from_search' => true,
+            'publicly_queryable'  => true,
+            'capability_type'     => 'page',
+        )
+    );
+
+    //Post Type Partners
+
+    register_post_type( 'patrons',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Global Patrons' ),
+                'singular_name' => __( 'Patron' )
+            ),
+            'rewrite' => array('slug' => 'patrons'),
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields'),
+            'public' => true,
+            'hierarchical'        => false,
+            'show_ui'             => true,
+            'show_in_menu'        => true,
+            'show_in_nav_menus'   => true,
+            'show_in_admin_bar'   => true,
+            'menu_position'       => 7,
+            'can_export'          => true,
+            'has_archive'         => false,
+            'exclude_from_search' => true,
+            'publicly_queryable'  => true,
+            'capability_type'     => 'page',
+        )
+    );
+
+    //Post Type Testimonials
+
+    register_post_type( 'team',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Team Staff' ),
+                'singular_name' => __( 'Team Member' )
+            ),
+            'rewrite' => array('slug' => 'team'),
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields'),
+            'public' => true,
+            'hierarchical'        => false,
+            'show_ui'             => true,
+            'show_in_menu'        => true,
+            'show_in_nav_menus'   => true,
+            'show_in_admin_bar'   => true,
+            'menu_position'       => 8,
             'can_export'          => true,
             'has_archive'         => false,
             'exclude_from_search' => true,
