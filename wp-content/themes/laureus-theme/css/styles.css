@@ -2371,6 +2371,8 @@ body {
     height: auto; }
   body iframe {
     max-width: 100%; }
+  body p {
+    font-family: "Gotham Book"; }
   body .green-cta {
     display: block;
     position: relative;
@@ -2480,7 +2482,7 @@ body .navbar.main-navigation {
     @media (min-width: 1200px) {
       body .navbar.main-navigation .container-fluid #navbar .navbar-brand {
         display: inline-block;
-        margin: 0 84px; } }
+        margin: 0 64px; } }
   body .navbar.main-navigation .container-fluid #navbar .menu-main-navigation-container {
     display: block; }
     @media (min-width: 1200px) {
@@ -3068,6 +3070,51 @@ footer {
           .follow-block ul li a {
             padding: 0 20px; } }
 
+.hero-title-wrapper {
+  background-size: cover;
+  background-position: top center;
+  position: relative; }
+  .hero-title-wrapper .container {
+    position: relative;
+    min-height: 18.9375em; }
+    @media (min-width: 1200px) {
+      .hero-title-wrapper .container {
+        height: 31.625em; } }
+  .hero-title-wrapper header h1 {
+    font-size: 30px;
+    display: block;
+    color: #ffffff;
+    line-height: 1;
+    font-family: "Gotham Bold";
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    text-align: center; }
+    @media (min-width: 1200px) {
+      .hero-title-wrapper header h1 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: left;
+        font-size: 110px; } }
+    .hero-title-wrapper header h1 span {
+      font-size: 20px;
+      display: block; }
+    .hero-title-wrapper header h1::after {
+      content: "";
+      display: block;
+      width: 104px;
+      height: 6px;
+      background-color: #00CDCD;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -52px; }
+      @media (min-width: 1200px) {
+        .hero-title-wrapper header h1::after {
+          left: 0;
+          margin-left: 0; } }
+
 .hero-home-block {
   position: relative;
   height: 100vh;
@@ -3130,11 +3177,14 @@ footer {
     @media (min-width: 1200px) {
       .story-home-block .side-story {
         width: 50%;
-        height: 100vh; } }
+        height: 56.25em; } }
     .story-home-block .side-story.video-wrapper {
       background-size: cover;
       background-position: center center;
       height: 100vh; }
+      @media (min-width: 1200px) {
+        .story-home-block .side-story.video-wrapper {
+          height: 56.25em; } }
       .story-home-block .side-story.video-wrapper a.play-icon {
         position: absolute;
         display: block;

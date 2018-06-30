@@ -202,6 +202,71 @@ function add_theme_menu_item()
 add_action("admin_menu", "add_theme_menu_item");
 
 
+// Get top taxtonomies
+function wpse_get_category_parents( $id, $link = false, $separator = '/', $nicename = false, $visited = array(), $iscrumb=false ) {
+    $chain = '';
+    $parent = get_term( $id, 'category' );
+    if ( is_wp_error( $parent ) ) {
+        return $parent;
+    }
+    if ( $nicename ) {
+        $name = $parent->slug;
+    } else {
+        $name = $parent->name;
+    }
+    if ( $parent->parent && ( $parent->parent != $parent->term_id ) && !in_array( $parent->parent, $visited ) ) {
+        $visited[] = $parent->parent;
+        $chain .= wpse_get_category_parents( $parent->parent, $link, $separator, $nicename, $visited , $iscrumb);
+    }
+    if (is_rtl()){
+        $sep_direction ='\\';
+    } else {
+        $sep_direction ='/';
+    }
+    if ($iscrumb){
+        $chain .= '<li><span class="sep">'.$sep_direction.'</span><a href="' . esc_url( get_category_link( $parent->term_id ) ) . '"><span>'.$name.'</span></a></li>' . $separator ;
+    } elseif ( $link && !$iscrumb) {
+        $chain .= '<a href="' . esc_url( get_category_link( $parent->term_id ) ) . '">'.$name.'</a>' . $separator ;
+    } else {
+        $chain .= $name.$separator;
+    }
+    return $chain;
+}
+
+// Breadcrumbs
+function wpse_get_breadcrumbs() {
+    global $wp_query;
+        $sep_direction ='|';
+    ?>
+    <ul><?php
+        // Adding the Home Page  ?>
+        <li><a href="<?php echo esc_url( home_url() ); ?>"><span> <?php bloginfo('name'); ?></span></a></li><?php
+        if ( ! is_front_page() ) {
+            // Check for categories, archives, search page, single posts, pages, the 404 page, and attachments
+            if ( is_page() ) {
+                $post = $wp_query->get_queried_object();
+                if ( $post->post_parent == 0 ) { ?>
+                    <li><?php _e( '<span class="sep">|</span>' ); the_title(); ?></li><?php
+                } else {
+                    $title = the_title( '','', false );
+                    $ancestors = array_reverse( get_post_ancestors( $post->ID ) );
+                    array_push( $ancestors, $post->ID );
+                    foreach ( $ancestors as $ancestor ) {
+                        if ( $ancestor != end( $ancestors ) ) { ?>
+                            <li>
+                                <span class="sep"><?php echo $sep_direction;?></span><a href="<?php echo esc_url( get_permalink( $ancestor ) ); ?>"> <span><?php echo strip_tags( apply_filters( 'single_post_title', get_the_title( $ancestor ) ) ); ?></span></a>
+                            </li><?php
+                        } else { ?>
+                            <li>
+                                <span class="sep"><?php echo $sep_direction;?></span><?php echo strip_tags( apply_filters( 'single_post_title', get_the_title( $ancestor ) ) ); ?>
+                            </li><?php
+                        }
+                    }
+                }
+            }
+        } ?>
+    </ul><?php
+}
 
 // Browser detection body_class() output
 

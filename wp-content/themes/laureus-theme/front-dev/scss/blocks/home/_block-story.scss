@@ -9,12 +9,15 @@
 		position: relative;
 		@include desktop {
 			width: 50%;
-			height: 100vh;
+			height: em(900);
 		}
 		&.video-wrapper {
 			background-size: cover;
 			background-position: center center;
 			height: 100vh;
+			@include desktop {
+				height: em(900);
+			}
 			a {
 				&.play-icon {
 					position: absolute;

@@ -19,6 +19,7 @@
 //Pages
 @import "pages/_page-template-contacto";
 @import "pages/_page-template-default";
+@import "pages/_page-template-about";
 
 //loops
 //@import "loops/_loop-posts";
@@ -30,9 +31,15 @@
 @import "blocks/commons/_block-news-grid";
 @import "blocks/commons/_block-patrons-inline";
 @import "blocks/commons/_block-follow";
+@import "blocks/commons/_block-breadcrumb";
+@import "blocks/commons/_hero-title";
 
 //Blocks Home
 @import "blocks/home/_block-hero";
 @import "blocks/home/_block-story";
 @import "blocks/home/_block-portfolio";
 @import "blocks/home/_block-involved";
+
+//Blocks About
+@import "blocks/about/_block-content";
+@import "blocks/about/_block-history";

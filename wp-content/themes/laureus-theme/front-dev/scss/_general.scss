@@ -156,6 +156,10 @@ body {
     max-width: 100%;
   }
 
+  p {
+    font-family: $book;
+  }
+
   //CTA STYLES
   .green-cta {
     display: block;

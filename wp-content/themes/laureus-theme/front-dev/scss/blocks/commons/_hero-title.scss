@@ -1,0 +1,51 @@
+.hero-title-wrapper {
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	.container {
+		position: relative;
+		min-height: em(303);
+		@include desktop {
+			height: em(506);
+		}
+	}
+	header {
+		h1 {
+			font-size: 30px;
+			display: block;
+			color: $white;
+			line-height: 1;
+			font-family: $bold;
+			padding-bottom: 20px;
+			margin-bottom: 30px;
+			position: relative;
+			text-align: center;
+			@include desktop {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				text-align: left;
+				font-size: 110px;
+			}
+			span {
+				font-size: 20px;
+				display: block;
+			}
+			&::after {
+				content: "";
+				display: block;
+				width: 104px;
+				height: 6px;
+				background-color: $marine;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				margin-left: -52px;
+				@include desktop {
+					left: 0;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
