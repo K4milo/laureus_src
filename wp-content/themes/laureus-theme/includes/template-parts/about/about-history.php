@@ -16,11 +16,11 @@
 <div id="aboutHistoryContent" class="container-fluid">
 	<div class="about-history-content row">
 		<div class="side-history image-wrapper">
-			<figure style="background-image: url('<?php $history_image; ?>')"></figure>
+			<figure style="background-image: url('<?php echo $history_image; ?>')"></figure>
 		</div>
 		<div class="side-history text">
 			<?php echo $our_history_text; ?>
-			<a href="/history"></a>
+			<a href="/history">Read More</a>
 		</div>
 	</div>
 </div>

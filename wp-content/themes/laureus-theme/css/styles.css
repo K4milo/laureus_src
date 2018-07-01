@@ -2360,7 +2360,8 @@
 
 body {
   font-family: "Gotham Medium";
-  font-size: 16px; }
+  font-size: 16px;
+  color: #666666; }
   body a {
     transition: all 0.3s; }
     body a:hover {
@@ -3070,6 +3071,28 @@ footer {
           .follow-block ul li a {
             padding: 0 20px; } }
 
+.bread-wrapper {
+  background-color: #dedee4;
+  width: 100%;
+  padding: 1.25em; }
+  @media (min-width: 1200px) {
+    .bread-wrapper {
+      padding: 1.8125em; } }
+  .bread-wrapper ul {
+    padding: 0;
+    margin: 0; }
+    .bread-wrapper ul li {
+      display: inline-block;
+      font-family: "Gotham Book";
+      font-size: 1.125em; }
+      .bread-wrapper ul li .sep {
+        display: inline-block;
+        color: #001440;
+        margin: 0 0.625em; }
+      .bread-wrapper ul li a {
+        color: #001440;
+        font-family: "Gotham Bold"; }
+
 .hero-title-wrapper {
   background-size: cover;
   background-position: top center;
@@ -3395,3 +3418,113 @@ footer {
         .involved-home-block ul li .involved__wrap h4 {
           color: #ffffff;
           font-size: 1.25em; }
+
+.about-content {
+  padding: 1.25em 0; }
+  @media (min-width: 1200px) {
+    .about-content {
+      padding: 2.5em 0; } }
+  .about-content .text-wrapper h2 {
+    font-family: "Gotham Book";
+    font-size: 1.5em;
+    color: #001440;
+    border-left: 6px solid #D4D743;
+    display: block; }
+    @media (min-width: 1200px) {
+      .about-content .text-wrapper h2 {
+        font-size: 2.125em;
+        padding: 0 0 0 20px; } }
+  @media (min-width: 1200px) {
+    .about-content .text-wrapper p {
+      padding: 1.25em 0 0 1.75em; } }
+  .about-content .video-thumb figure {
+    position: relative;
+    display: block; }
+    @media (min-width: 1200px) {
+      .about-content .video-thumb figure {
+        width: 100%;
+        height: 16.0625em; } }
+    .about-content .video-thumb figure a {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background-image: url("../img/icons/watch-video.png");
+      background-repeat: no-repeat;
+      background-position: 20% center; }
+    .about-content .video-thumb figure img {
+      display: block; }
+
+.about-history-content {
+  background-color: #001440; }
+  @media (min-width: 1200px) {
+    .about-history-content {
+      display: flex; } }
+  .about-history-content .side-history {
+    position: relative;
+    min-height: 30.375em; }
+    @media (min-width: 1200px) {
+      .about-history-content .side-history {
+        width: 50%;
+        min-height: 55.375em; } }
+    .about-history-content .side-history.image-wrapper {
+      display: block; }
+      .about-history-content .side-history.image-wrapper figure {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center; }
+    .about-history-content .side-history.text {
+      color: #ffffff;
+      padding: 1.875em; }
+      @media (min-width: 1200px) {
+        .about-history-content .side-history.text {
+          padding: 6.875em 1.875em; } }
+      .about-history-content .side-history.text h2 {
+        line-height: 0;
+        font-size: 1.25em; }
+      .about-history-content .side-history.text h3 {
+        line-height: 0;
+        font-size: 30px;
+        display: block;
+        line-height: 1;
+        font-family: "Gotham Bold";
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        position: relative;
+        text-align: center; }
+        @media (min-width: 1200px) {
+          .about-history-content .side-history.text h3 {
+            text-align: left;
+            font-size: 110px; } }
+        .about-history-content .side-history.text h3::after {
+          content: "";
+          display: block;
+          width: 104px;
+          height: 6px;
+          background-color: #00CDCD;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          margin-left: -52px; }
+          @media (min-width: 1200px) {
+            .about-history-content .side-history.text h3::after {
+              left: 0;
+              margin-left: 0; } }
+      .about-history-content .side-history.text p {
+        font-size: 1.25em; }
+      .about-history-content .side-history.text a {
+        margin-top: 2.75em;
+        display: inline-block;
+        color: #001440;
+        background-color: #D4D743;
+        font-family: "Gotham Bold";
+        font-size: 0.875em;
+        text-align: center;
+        padding: 0.9375em 1.5625em; }

@@ -138,9 +138,39 @@ $browser-context: 16; // Default
   transform: translateY(-50%);
 }
 
+@mixin afterTitle($color)  {
+  &::after {
+    content: "";
+    display: block;
+    width: 104px;
+    height: 6px;
+    background-color: $color;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -52px;
+    @include desktop {
+      left: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+@mixin green-btn {
+  display: inline-block;
+  color: $dblue;
+  background-color: $crygr;
+  font-family: $bold;
+  font-size: em(14);
+  text-align: center;
+  padding: em(15) em(25);
+}
+
+
 body {
 	font-family: $regular; 
   font-size: 16px;
+  color: $txtgrey;
   a{
     transition: all 0.3s;
     &:hover{

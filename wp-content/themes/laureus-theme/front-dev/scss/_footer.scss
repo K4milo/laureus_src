@@ -54,13 +54,7 @@ footer {
 		}
 		&.secondary-menu {
 			.green-btn {
-				display: inline-block;
-				color: $dblue;
-				background-color: $crygr;
-				font-family: $bold;
-				font-size: em(14);
-				text-align: center;
-				padding: em(15) em(25);
+				@include green-btn;
 			}
 		}
 	}

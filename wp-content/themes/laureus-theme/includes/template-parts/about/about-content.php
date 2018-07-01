@@ -19,9 +19,8 @@
 		</div>
 		<div class="col-md-6 video-thumb">
 			<figure class="video">
-				<a href="<?php echo $video_url;?>" data-fancybox>
-					<img src="<?php echo $video_thumbnail; ?>" alt="image video Laureus">
-				</a>
+				<a href="<?php echo $video_url;?>" data-fancybox></a>
+				<img src="<?php echo $video_thumbnail; ?>" alt="image video Laureus">
 			</figure>
 		</div>
 	</div>
