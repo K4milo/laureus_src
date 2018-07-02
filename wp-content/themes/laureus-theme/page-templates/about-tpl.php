@@ -20,6 +20,9 @@
       // History Block
       get_template_part('includes/template-parts/about/about','history'); 
 
+      // Team inline
+      get_template_part('includes/loops/loop-team-inline');
+
       // Patrons inline
       get_template_part('includes/loops/loop-patrons-inline');
 

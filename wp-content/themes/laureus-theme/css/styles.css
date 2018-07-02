@@ -2435,6 +2435,9 @@ body {
         body .con-modal .wrap-fix figure img {
           max-width: 100%; }
 
+body.home .navbar.main-navigation .container-fluid #navbar .menu-slide-links-menu-container ul li:last-child a {
+  background-color: #001440; }
+
 body .navbar.main-navigation {
   background-color: transparent;
   border: none;
@@ -2443,6 +2446,19 @@ body .navbar.main-navigation {
   width: 100%;
   top: 0;
   left: 0; }
+  body .navbar.main-navigation .container-fluid .navbar-brand {
+    display: none;
+    overflow: hidden;
+    vertical-align: middle;
+    background-image: url("../img/logos/logo.png");
+    float: none;
+    width: 235px;
+    height: 61px;
+    text-indent: -9999999px; }
+    @media (min-width: 1200px) {
+      body .navbar.main-navigation .container-fluid .navbar-brand {
+        display: inline-block;
+        margin: 0 64px; } }
   @media (min-width: 1200px) {
     body .navbar.main-navigation .container-fluid #navbar {
       text-align: center;
@@ -2469,21 +2485,8 @@ body .navbar.main-navigation {
         body .navbar.main-navigation .container-fluid #navbar .menu-slide-links-menu-container ul li:last-child {
           margin-left: -6px; }
           body .navbar.main-navigation .container-fluid #navbar .menu-slide-links-menu-container ul li:last-child a {
-            background-color: #001440;
+            background-color: #00CDCD;
             color: #ffffff; }
-  body .navbar.main-navigation .container-fluid #navbar .navbar-brand {
-    display: none;
-    overflow: hidden;
-    vertical-align: middle;
-    background-image: url("../img/logos/logo.png");
-    float: none;
-    width: 235px;
-    height: 61px;
-    text-indent: -9999999px; }
-    @media (min-width: 1200px) {
-      body .navbar.main-navigation .container-fluid #navbar .navbar-brand {
-        display: inline-block;
-        margin: 0 64px; } }
   body .navbar.main-navigation .container-fluid #navbar .menu-main-navigation-container {
     display: block; }
     @media (min-width: 1200px) {
@@ -3040,6 +3043,63 @@ footer {
       margin: 0 2.5em;
       font-family: "Gotham Book";
       font-size: 1.125em; }
+
+.team-list {
+  background-image: url("../img/bg/blue-pattern.jpg");
+  padding: 2.5em 0; }
+  @media (min-width: 1200px) {
+    .team-list {
+      padding: 8.75em 0 4.375em; } }
+  @media (min-width: 1200px) {
+    .team-list .container {
+      overflow: hidden; } }
+  .team-list .container h3 {
+    font-size: 60px;
+    display: block;
+    color: #F2F5D2;
+    line-height: 1;
+    font-family: "Gotham Bold";
+    padding-bottom: 20px; }
+    @media (min-width: 1200px) {
+      .team-list .container h3 {
+        font-size: 110px; } }
+    .team-list .container h3 span {
+      font-size: 30px;
+      display: block; }
+  .team-list .container .team-wrapper .team-item {
+    display: block;
+    color: #F2F5D2;
+    width: 90%;
+    margin: 2% auto; }
+    @media (min-width: 1200px) {
+      .team-list .container .team-wrapper .team-item {
+        display: inline-block;
+        vertical-align: top;
+        width: 18%;
+        margin: 0 1% 0 0; } }
+    .team-list .container .team-wrapper .team-item img {
+      width: 100%;
+      height: auto; }
+    .team-list .container .team-wrapper .team-item .content-wrapper h4 a {
+      font-family: "Gotham Bold";
+      color: #F2F5D2; }
+    @media (min-width: 1200px) {
+      .team-list .container .team-wrapper .team-item.item__5 {
+        margin-right: 0; } }
+  .team-list .container .team-wrapper .read_more {
+    text-align: center;
+    font-family: "Gotham Bold";
+    margin: 4.25em auto 0; }
+    @media (min-width: 1200px) {
+      .team-list .container .team-wrapper .read_more {
+        margin: 5.5em auto 0; } }
+    .team-list .container .team-wrapper .read_more i {
+      display: block;
+      margin: 1.25em auto;
+      font-size: 1.25em; }
+    .team-list .container .team-wrapper .read_more a {
+      color: #001440;
+      text-transform: uppercase; }
 
 .follow-block {
   background-color: #001440;

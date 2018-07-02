@@ -1,4 +1,28 @@
 body {
+	&.home {
+		// just jome dblue color in side link
+		.navbar {
+			&.main-navigation{
+				.container-fluid {
+					// Min Navigation styles
+					#navbar {
+						.menu-slide-links-menu-container {
+							ul{
+								li {
+									&:last-child {
+										a {
+											background-color: $dblue;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 	.navbar {
 		&.main-navigation{
 			background-color: transparent;
@@ -9,6 +33,25 @@ body {
 			top: 0;
 			left: 0;
 			.container-fluid {
+				// brand
+				.navbar-brand {
+					display: none;
+					overflow: hidden;
+					vertical-align: middle;
+					background-image: url('../img/logos/logo.png');
+					float: none;
+					width: 235px;
+					height: 61px;
+					text-indent: -9999999px;
+					@include desktop {
+						display: inline-block;
+						margin: 0 64px;
+					}
+					@mixin smdesktop {
+						margin: 0 34px;	
+					}
+				}
+
 				// Min Navigation styles
 				#navbar {
 					//left menu
@@ -42,31 +85,12 @@ body {
 								&:last-child {
 									margin-left: -6px;
 									a {
-										background-color: $dblue;
+										background-color: $marine;
 										color: $white;
 									}
 								}
 							}
 						}
-					}
-					// brand
-					.navbar-brand {
-						display: none;
-						overflow: hidden;
-						vertical-align: middle;
-						background-image: url('../img/logos/logo.png');
-						float: none;
-						width: 235px;
-						height: 61px;
-						text-indent: -9999999px;
-						@include desktop {
-							display: inline-block;
-							margin: 0 64px;
-						}
-						@mixin smdesktop {
-							margin: 0 34px;	
-						}
-
 					}
 				
 					// main menu

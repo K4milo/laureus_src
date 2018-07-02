@@ -9,9 +9,7 @@
 
 				$args = array(
 					'post_type' => 'post',
-					'posts_per_page' => 2,
-					'orderby' => 'title',
-					'order'   => 'ASC'
+					'posts_per_page' => 2
 				);
 
 				$query = new WP_Query($args);
@@ -25,7 +23,7 @@
 					<div class="content-wrapper">
 						<h4><?php the_title();?></h4>
 						<?php the_excerpt();?>
-						<a href="#">Read more</a>
+						<a href="<?php the_permalink(); ?>">Read more</a>
 					</div>
 				</div>
 
