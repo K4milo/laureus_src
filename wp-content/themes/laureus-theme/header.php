@@ -28,27 +28,79 @@
       <a class="navbar-brand visible-xs logo-mobile" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
     </div>
     <div class="collapse navbar-collapse" id="navbar">
-      <?php
-      //Menu Call
-        wp_nav_menu( 
-          array(
-            'theme_location'    => 'navbar-top',
-            'menu_class'        => 'nav navbar-side'
-          )
-        );
-      ?>
+      <div class="menu-desktop">
+        <?php
+        //Menu Call
+          wp_nav_menu( 
+            array(
+              'theme_location'    => 'navbar-top',
+              'menu_class'        => 'nav navbar-side'
+            )
+          );
+        ?>
 
-      <a class="navbar-brand logo-desktop" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
-      <?php
-			//Menu Call
-        wp_nav_menu( 
-  				array(
-  					'theme_location'    => 'navbar-main',
-  					'depth'             => 2,
-  					'menu_class'        => 'nav navbar-nav'
-  				)
-  			);
-      ?>
+        <a class="navbar-brand logo-desktop" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
+        <?php
+  			//Menu Call
+          wp_nav_menu( 
+    				array(
+    					'theme_location'    => 'navbar-main',
+    					'depth'             => 2,
+    					'menu_class'        => 'nav navbar-nav'
+    				)
+    			);
+        ?>
+      </div>
+      <div class="menu-mobile">
+        <?php
+        //Menu Call
+          wp_nav_menu( 
+            array(
+              'theme_location'    => 'navbar-top',
+              'menu_class'        => 'nav navbar-side'
+            )
+          );
+        ?>
+
+        <?php
+        //Menu Call
+          wp_nav_menu( 
+            array(
+              'theme_location'    => 'navbar-main',
+              'depth'             => 2,
+              'menu_class'        => 'nav navbar-nav'
+            )
+          );
+        ?>
+
+        <?php
+          // Follow us block Vars
+          $facebook = get_option("facebook_url");
+          $twitter = get_option("twitter_url");
+          $instagram = get_option("instagram_url");
+          $youtube = get_option("youtube_url");
+        ?>  
+
+        <div id="socialmenu" class="container-fluid">
+          <div class="row follow-menu">
+            <h3>Follow Us</h3>
+            <ul>
+              <?php if($facebook):?>
+                <li><a href="<?php echo $facebook; ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <?php endif;?>
+              <?php if($twitter):?>
+                <li><a href="<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <?php endif;?>
+              <?php if($instagram):?>
+                <li><a href="<?php echo $instagram; ?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              <?php endif;?>
+              <?php if($youtube):?>
+                <li><a href="<?php echo $youtube; ?>" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+              <?php endif;?>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->
 </nav>

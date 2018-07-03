@@ -20,10 +20,9 @@
 
 <div id="workCities" class="container-fluid">
 	<div class="work-cities row">
-
-		<figure class="side-city image" style="background-image: url('<?php echo $cities_sports_image; ?>')">
-			<img src="<?php echo $cities_sports_image; ?>" alt="Image laureus cities"/>
-		</figure>
+		<div class="side-city work-thumb">
+			<figure style="background-image: url('<?php echo $cities_sports_image; ?>')"></figure>
+		</div>
 		
 		<div class="side-city text-wrapper">
 			<?php echo $cities_sports_content; ?>

@@ -25,13 +25,16 @@ body {
 
 	.navbar {
 		&.main-navigation{
-			background-color: transparent;
+			background-color: $dblue;
 			border: none;
 			margin: 0;
 			position: absolute;
 			width: 100%;
 			top: 0;
 			left: 0;
+			@include desktop {
+				background-color: transparent;
+			}
 			.container-fluid {
 				// brand
 				.navbar-brand {
@@ -47,8 +50,12 @@ body {
 						display: inline-block;
 						margin: 0 64px;
 					}
-					@mixin smdesktop {
-						margin: 0 34px;	
+					@include smdesktop {
+						margin: 0;
+						width: em(174);
+						background-position: center;
+						background-size: contain;
+						background-repeat: no-repeat;	
 					}
 				}
 
@@ -59,22 +66,45 @@ body {
 						text-align: center;
 						padding-top: em(20);
 					}
+
+					//conditional blocks responsive
+
+					.menu-mobile {
+						display: block;
+						@include desktop {
+							display: none;
+						}
+					}
+					
+					.menu-desktop {
+						display: none;
+						overflow: hidden;
+						@include desktop {
+							display: block;
+						}
+					}
+
+					// Specific styles
 					.menu-slide-links-menu-container {
 						display: block;
 						@include desktop {
-							display: inline-block;
+							display: block;
+							float: left;
 						}
 						ul{
 							padding: 0;
 							li {
 								display: block;
+								width: 100%;
 								@include desktop {
 									display: inline-block;
+									width: inherit;
 								}
 								a {
 									display: block;
 									padding: em(20);
 									text-align: center;
+									text-transform: uppercase;
 								}
 								&:first-child {
 									a {
@@ -97,7 +127,9 @@ body {
 					.menu-main-navigation-container {
 						display: block;
 						@include desktop {
-							display: inline-block;
+							display: block;
+							float: right;
+							padding-top: em(18);
 						}
 						ul {
 							&.nav{
@@ -110,6 +142,7 @@ body {
 										color: $white;
 										text-align: center;
 										padding: 0 em(10);
+										font-family: $bold;
 										@include desktop {
 											border-right: 1px solid $white;
 										}

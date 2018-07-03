@@ -16,7 +16,7 @@
 
 <?php if($good_league_content || $good_league_image || $good_league_cta): ?>
 <div id="workLeague" class="container-fluid">
-	<div class="work-good container">
+	<div class="work-good row">
 		<div class="side-good work-thumb">
 			<figure style="background-image: url('<?php echo $good_league_image; ?>')"></figure>
 		</div>
