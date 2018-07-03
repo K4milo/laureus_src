@@ -1,0 +1,76 @@
+.team-list {
+	background-image: url('../img/bg/blue-pattern.jpg');
+	padding: em(40) 0;
+	@include desktop {
+		padding: em(140) 0 em(70);
+	}
+	.container {
+		@include desktop {
+			overflow: hidden;
+		}
+		h3 {
+			font-size: 60px;
+			display: block;
+			color: $cream;
+			line-height: 1;
+			font-family: $bold;
+			padding-bottom: 20px;
+			@include desktop {
+				font-size: 110px;
+			}
+			span {
+				font-size: 30px;
+				display: block;
+			}
+		}
+		.team-wrapper {
+			.team-item {
+				display: block;
+				color: $cream;
+				width: 90%;
+				margin: 2% auto;
+				@include desktop {
+					display: inline-block;
+					vertical-align: top;
+					width: 18%;
+					margin:0 1% 0 0;
+				}
+				img {
+					width: 100%;
+					height: auto;
+				}
+				.content-wrapper {
+					h4 {
+						a {
+							font-family: $bold;
+							color: $cream;
+						}
+					}
+				}
+				&.item__5 {
+					@include desktop {
+						margin-right: 0;
+					}
+				}
+			}
+
+			.read_more {
+				text-align: center;
+				font-family: $bold;
+				margin: em(68) auto 0;
+				@include desktop {
+					margin: em(88) auto 0;
+				}
+				i{
+					display: block;
+					margin: em(20) auto;
+					font-size: em(20);
+				}
+				a {
+					color: $dblue;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
