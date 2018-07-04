@@ -27,27 +27,37 @@ footer {
 			@include desktop {
 				width: 58%;
 			}
-			ul {
+			ul#menu-footer-menu {
+				list-style: none;
 				padding: 0;
 				text-align: center;
 				@include desktop {
 					text-align: left;
 				}
-				li {
+				> li {
 					display: block;
 					@include desktop {
 						display: inline-block;
 						margin-right: em(80);
+						vertical-align: top;
+						font-size: em(18);
 					}
 					a {
+						padding: 0;
+						background: transparent;
 						color: $white;
-						font-family: $book;
-						font-size: em(18)
-					}
-				}
-				> li {
-					a {
 						font-family: $bold;
+					}
+					ul {
+						list-style: none;
+						padding: 0;
+						li {
+							a {
+								color: $white;
+								font-family: $book;
+								font-size: em(14);
+							}
+						}
 					}
 				}
 			}
