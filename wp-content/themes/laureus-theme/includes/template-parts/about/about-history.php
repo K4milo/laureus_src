@@ -20,7 +20,7 @@
 		</div>
 		<div class="side-history text">
 			<?php echo $our_history_text; ?>
-			<a href="/history">Read More</a>
+			<a href="/about-us/our-history/">Read More</a>
 		</div>
 	</div>
 </div>

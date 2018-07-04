@@ -2536,6 +2536,46 @@ body .navbar.main-navigation {
         body .navbar.main-navigation .container-fluid #navbar .menu-main-navigation-container ul.nav li:last-child a {
           border-right: none; }
 
+.content-default {
+  padding-bottom: 2.125em; }
+  @media (min-width: 1200px) {
+    .content-default {
+      padding-bottom: 4.625em; } }
+  .content-default h2 {
+    font-family: "Gotham Book";
+    font-size: 24px;
+    color: #001440;
+    border-left: 6px solid #D4D743;
+    display: block;
+    padding: 0 0 0 15px;
+    margin-bottom: 0.625em; }
+    @media (min-width: 1200px) {
+      .content-default h2 {
+        font-size: 34px;
+        padding: 0 0 0 20px; } }
+    @media (min-width: 1200px) {
+      .content-default h2 {
+        margin-bottom: 0.875em; } }
+  .content-default h3 {
+    color: #001440;
+    font-family: "Gotham Bold";
+    margin: 1.5em 0; }
+  .content-default iframe {
+    width: 100%;
+    height: 38.0625em; }
+    @media (min-width: 1200px) {
+      .content-default iframe {
+        height: 45.5625em; } }
+  .content-default img {
+    width: 100%;
+    height: auto; }
+
+.additional-wrapper {
+  padding-top: 2.125em; }
+  @media (min-width: 1200px) {
+    .additional-wrapper {
+      padding-top: 4.625em; } }
+
 footer {
   background-color: #001440;
   padding: 1.875em 0;
@@ -2772,6 +2812,53 @@ footer {
           display: none; }
     .slick-dots li.slick-active button {
       background-color: white; }
+
+.team-loop-wrapper {
+  padding: 2.5em 0; }
+  @media (min-width: 1200px) {
+    .team-loop-wrapper .team-item {
+      margin-bottom: 4em; } }
+  .team-loop-wrapper .team-item .thumb {
+    display: block;
+    position: relative;
+    padding-bottom: 1.625em; }
+    @media (min-width: 1200px) {
+      .team-loop-wrapper .team-item .thumb {
+        display: inline-block;
+        vertical-align: top; } }
+    .team-loop-wrapper .team-item .thumb img {
+      max-width: 100%; }
+    .team-loop-wrapper .team-item .thumb::after {
+      content: "";
+      display: block;
+      width: 104px;
+      height: 6px;
+      background-color: #00CDCD;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -52px; }
+      @media (min-width: 1200px) {
+        .team-loop-wrapper .team-item .thumb::after {
+          left: 0;
+          margin-left: 0; } }
+  .team-loop-wrapper .team-item .content-wrapper {
+    display: block; }
+    @media (min-width: 1200px) {
+      .team-loop-wrapper .team-item .content-wrapper {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 1.25em;
+        width: 73%; } }
+    .team-loop-wrapper .team-item .content-wrapper h3 {
+      margin-top: 0; }
+      .team-loop-wrapper .team-item .content-wrapper h3 a {
+        font-size: 30px;
+        color: #001440;
+        font-family: "Gotham Bold"; }
+    .team-loop-wrapper .team-item .content-wrapper h4 {
+      font-size: 1.125em;
+      color: #001440; }
 
 .logos-wrapper ul {
   padding: 1.875em 0;
@@ -3181,10 +3268,23 @@ footer {
         color: #001440;
         font-family: "Gotham Bold"; }
 
+.parallax-wrapper {
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 12.5em 0; }
+  .parallax-wrapper .container p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.875em; }
+
 .hero-title-wrapper {
   background-size: cover;
   background-position: top center;
   position: relative; }
+  .hero-title-wrapper.default-image {
+    background-image: url("../img/bg/default-hero-title.jpg"); }
   .hero-title-wrapper .container {
     position: relative;
     min-height: 18.9375em; }
@@ -3514,13 +3614,14 @@ footer {
       padding: 2.5em 0; } }
   .about-content .text-wrapper h2 {
     font-family: "Gotham Book";
-    font-size: 1.5em;
+    font-size: 24px;
     color: #001440;
     border-left: 6px solid #D4D743;
-    display: block; }
+    display: block;
+    padding: 0 0 0 15px; }
     @media (min-width: 1200px) {
       .about-content .text-wrapper h2 {
-        font-size: 2.125em;
+        font-size: 34px;
         padding: 0 0 0 20px; } }
   @media (min-width: 1200px) {
     .about-content .text-wrapper p {
@@ -3624,13 +3725,14 @@ footer {
       padding: 2.5em 0; } }
   .work-content .text-wrapper h2 {
     font-family: "Gotham Book";
-    font-size: 1.5em;
+    font-size: 24px;
     color: #001440;
     border-left: 6px solid #D4D743;
-    display: block; }
+    display: block;
+    padding: 0 0 0 15px; }
     @media (min-width: 1200px) {
       .work-content .text-wrapper h2 {
-        font-size: 2.125em;
+        font-size: 34px;
         padding: 0 0 0 20px; } }
   @media (min-width: 1200px) {
     .work-content .text-wrapper p {

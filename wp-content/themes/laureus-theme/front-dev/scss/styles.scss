@@ -8,6 +8,7 @@
 @import "_general";
 @import "_header";
 @import "_contact";
+@import "_commons";
 @import "_footer";
 
 //sections
@@ -22,7 +23,7 @@
 @import "pages/_page-template-about";
 
 //loops
-//@import "loops/_loop-posts";
+@import "loops/_loop-team";
 
 // Universal Blocks
 @import "blocks/commons/_block-logos";
@@ -33,6 +34,7 @@
 @import "blocks/commons/_block-team-list";
 @import "blocks/commons/_block-follow";
 @import "blocks/commons/_block-breadcrumb";
+@import "blocks/commons/_block-parallax";
 @import "blocks/commons/_hero-title";
 
 //Blocks Home

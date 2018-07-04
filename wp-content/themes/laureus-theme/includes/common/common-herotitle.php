@@ -6,13 +6,25 @@
 
 <?php if($hero_img):  ?>
 
-<div id="heroTitle" class="container-fluid">
-	<div class="row hero-title-wrapper" style="background: url('<?php echo $hero_img; ?>')">
-		<div class="container">
-			<header>
-				<h1><?php the_title(); ?></h1>
-			</header>
+	<div id="heroTitle" class="container-fluid">
+		<div class="row hero-title-wrapper" style="background: url('<?php echo $hero_img; ?>')">
+			<div class="container">
+				<header>
+					<h1><?php the_title(); ?></h1>
+				</header>
+			</div>
 		</div>
 	</div>
-</div>
+
+<?php else:  ?>
+	<div id="heroTitle" class="container-fluid">
+		<div class="row hero-title-wrapper default-image">
+			<div class="container">
+				<header>
+					<h1><?php the_title(); ?></h1>
+				</header>
+			</div>
+		</div>
+	</div>
+
 <?php endif; ?>

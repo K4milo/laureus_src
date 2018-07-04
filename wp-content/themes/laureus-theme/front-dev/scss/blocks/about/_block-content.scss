@@ -5,15 +5,7 @@
 	}
 	.text-wrapper {
 		h2 {
-			font-family: $book;
-			font-size: em(24);
-			color: $dblue;
-			border-left: 6px solid $crygr;
-			display: block;
-			@include desktop {
-				font-size: em(34);
-				padding: 0 0 0 20px;
-			}
+			@include headerTitle;
 		}
 		p {
 			@include desktop { 

@@ -111,6 +111,32 @@ function create_posttype() {
         )
     );
 
+    //Post Type Grants
+
+    register_post_type( 'grants',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Grant' ),
+                'singular_name' => __( 'Grant Item' )
+            ),
+            'rewrite' => array('slug' => 'grant'),
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields'),
+            'public' => true,
+            'hierarchical'        => false,
+            'show_ui'             => true,
+            'show_in_menu'        => true,
+            'show_in_nav_menus'   => true,
+            'show_in_admin_bar'   => true,
+            'menu_position'       => 9,
+            'can_export'          => true,
+            'has_archive'         => false,
+            'exclude_from_search' => true,
+            'publicly_queryable'  => true,
+            'capability_type'     => 'page',
+        )
+    );
+
     
     ////////////////////
     // TAXONOMIES

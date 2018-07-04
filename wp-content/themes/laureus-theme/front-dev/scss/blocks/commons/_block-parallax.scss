@@ -1,0 +1,14 @@
+.parallax-wrapper {
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+	position: relative;
+	padding: em(200) 0; 
+	.container {
+		p {
+			text-align: center;
+			color: $white;
+			font-size: em(30);
+		}
+	}
+}

@@ -1,0 +1,38 @@
+// Ceneric block for content
+.content-default {
+	padding-bottom: em(34);
+	@include desktop {
+		padding-bottom: em(74);
+	}
+	h2 {
+		@include headerTitle;
+		margin-bottom: em(10);
+		@include desktop {
+			margin-bottom: em(14);
+		}
+	}
+	h3 {
+		color: $dblue;
+		font-family: $bold;
+		margin: em(24) 0;
+	}
+	iframe {
+		width: 100%;
+		height: em(609);
+		@include desktop {
+			height: em(729);
+		}
+	}
+	img {
+		width: 100%;
+		height: auto;	
+	}
+}
+
+// Ceneric block for history page
+.additional-wrapper {
+	padding-top: em(34);
+	@include desktop {
+		padding-top: em(74);
+	}
+}

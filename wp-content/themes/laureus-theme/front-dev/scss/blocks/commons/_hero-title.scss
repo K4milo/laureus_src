@@ -2,6 +2,9 @@
 	background-size: cover;
 	background-position: top center;
 	position: relative;
+	&.default-image {
+		background-image: url('../img/bg/default-hero-title.jpg');
+	}
 	.container {
 		position: relative;
 		min-height: em(303);

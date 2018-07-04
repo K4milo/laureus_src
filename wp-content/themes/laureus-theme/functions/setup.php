@@ -14,7 +14,7 @@ if (! isset($content_width))
 	$content_width = 600;
 
 function laureus_excerpt_readmore() {
-	return '';
+	return '...';
 }
 add_filter('excerpt_more', 'laureus_excerpt_readmore');
 

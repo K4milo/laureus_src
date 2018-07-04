@@ -17,6 +17,19 @@ $browser-context: 16; // Default
   }
 }
 
+@mixin headerTitle {
+  font-family: $book;
+  font-size: 24px;
+  color: $dblue;
+  border-left: 6px solid $crygr;
+  display: block;
+  padding: 0 0 0 15px;
+  @include desktop {
+    font-size: 34px;
+    padding: 0 0 0 20px;
+  }
+}
+
 @mixin bgcover{
   background-size: cover;
   background-position: center center;
