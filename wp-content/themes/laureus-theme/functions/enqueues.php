@@ -29,6 +29,9 @@ function laureus_enqueues() {
 	wp_register_script('fancybox', get_template_directory_uri() . '/js/vendors/fancybox.js', false, wp_register_script, true);
 	wp_enqueue_script('fancybox');
 
+	wp_register_script('counterUp', get_template_directory_uri() . '/js/vendors/counterUp.js', false, wp_register_script, true);
+	wp_enqueue_script('counterUp');
+
 	wp_register_script('slick', get_template_directory_uri() . '/js/vendors/slick.min.js', false, wp_register_script, true);
 	wp_enqueue_script('slick');
 

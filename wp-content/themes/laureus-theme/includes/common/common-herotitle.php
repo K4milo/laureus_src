@@ -7,7 +7,7 @@
 <?php if($hero_img):  ?>
 
 	<div id="heroTitle" class="container-fluid">
-		<div class="row hero-title-wrapper" style="background: url('<?php echo $hero_img; ?>')">
+		<div class="row hero-title-wrapper" style="background-image: url('<?php echo $hero_img; ?>')">
 			<div class="container">
 				<header>
 					<h1><?php the_title(); ?></h1>

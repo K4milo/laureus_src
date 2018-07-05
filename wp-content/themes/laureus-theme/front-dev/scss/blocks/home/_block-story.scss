@@ -1,6 +1,6 @@
 .story-home-block {
-	height: 100vh;
 	display: block;
+	background-color: $dblue;
 	@include desktop {
 		height: em(900);
 		display: flex;
@@ -13,10 +13,15 @@
 		}
 		&.video-wrapper {
 			background-size: cover;
+			background-color: $dblue;
 			background-position: center center;
-			height: 100vh;
+			height: em(350);
+			transition: all 0.3s;
 			@include desktop {
 				height: em(900);
+			}
+			&:hover {
+				opacity: 0.7;
 			}
 			a {
 				&.play-icon {
@@ -30,6 +35,7 @@
 			}
 		}
 		&.text-wrapper { 
+			background-color: $white;
 			padding: em(42);
 			.text-content {
 				width: 90%;
@@ -49,7 +55,7 @@
 					line-height: 1;
 					color: $dblue;
 					margin-top: 0;
-					font-size: em(40);
+					font-size: em(60);
 					font-family: $bold;
 					@include desktop {
 						font-size: em(80);
@@ -63,23 +69,35 @@
 					ul {
 						padding: em(34) 0 0;
 						li {
-							display: inline-block;
-							border-right: 1px solid $txtgrey;
+							display: block;
+							@include desktop {
+								display: inline-block;
+							}
 							a {
 								font-family: $book;
 								font-size: em(14);
-								padding: 0 em(20);
 								color: $txtgrey;
+								padding: em(10);
+								@include desktop {
+									padding: 0 em(20);
+									border-right: 1px solid $txtgrey;
+								}
+								&:hover {
+									color: $marine;
+									text-decoration: underline;
+								}
 							}
 							&:first-child{
 								a {
-									padding-left: 0;
+									@include desktop {
+										padding-left: 0;
+									}
 								}
 							}
 							&:last-child{
-								border-right: none;
 								a {
 									padding-right: 0;
+									border-right: none;
 								}
 							}
 						}

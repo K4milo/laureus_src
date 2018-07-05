@@ -15,9 +15,7 @@
 				vertical-align: top;
 			}
 			&.text-wrapper {
-				@include desktop {
-					text-align: left;
-				}
+				text-align: left;
 				h2 {
 					line-height: 1;
 					margin: 0;
@@ -28,7 +26,7 @@
 					line-height: 1;
 					position: relative;
 					margin-top: 0;
-					font-size: em(30);
+					font-size: em(50);
 					font-family: $bold;
 					padding-bottom: em(6);
 					@include desktop {
@@ -66,7 +64,29 @@
 					li {
 						overflow: hidden;
 						display: block;
-						margin-bottom: em(60);
+						padding: em(30) 0;
+						&:nth-child(1){
+							span {
+								h5 {
+									&::before {
+										content:"$";
+										font-family: $bold;
+										font-size: em(14);
+										margin: 5px 11px;
+										color: $marine-dk; 
+										display: inline-block;
+										vertical-align: top;
+										@include desktop {
+											font-size: em(10);
+										}
+									}
+								}
+							}
+						}
+						&:nth-child(2){
+							border-top: em(2) solid rgba(255,255,255,0.5);
+							border-bottom: em(2) solid rgba(255,255,255,0.5);
+						}
 						img {
 							float: left;
 						}
@@ -87,7 +107,7 @@
 								font-size: em(30);
 								font-family: $bold;
 								@include desktop {
-									font-size: em(50);
+									font-size: em(60);
 								}
 							}
 						}

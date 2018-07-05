@@ -1,0 +1,61 @@
+.grants-loop {
+	.grant-item {
+		position: relative;
+		padding: 0 em(10);
+		margin-bottom: em(20);
+		@include desktop {
+			display: inline-block;
+			vertical-align: top;
+			width: 19%;
+		}
+		.inner-wrapper {
+			position: relative;
+			margin: em(5);
+			min-height: em(400);
+			padding-bottom: em(40);
+			tranition: all 0.4s;
+			@include desktop {
+				min-height: em(460);
+			}
+			&:hover {
+				border-bottom: 3px solid $marine;
+				box-shadow: 0 0 em(5) $lgrey;
+				a {
+					display: block;
+				}
+			}
+		}
+		figure {
+			display: block;
+			background-size: cover;
+			background-position: top center;
+			width: 100%;
+			height: em(185);
+			margin: 0 auto;
+		}
+		h4{
+			color: $dblue;
+			font-size: em(18);
+			font-family: $bold;
+			padding:0 em(10);
+		}
+		p {
+			font-family: $book;
+			font-size: em(14);
+			padding:0 em(10);
+		}
+		a {
+			display: none;
+			position: absolute;
+			bottom: em(6);
+			left: 0;
+			width: 100%;
+			color: $dblue;
+			font-family: $bold;
+			font-size: em(14);
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			text-align: center;
+		}
+	}
+}

@@ -18,6 +18,11 @@ function laureus_excerpt_readmore() {
 }
 add_filter('excerpt_more', 'laureus_excerpt_readmore');
 
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
 //Support language
 function language_selector(){
     $languages = icl_get_languages('skip_missing=0&orderby=code');

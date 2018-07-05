@@ -25,7 +25,7 @@
 				<a href="<?php echo $hero_url; ?>" class="hero-caption--url green-cta"><?php echo $hero_url_text; ?></a>
 			<?php endif; ?>
 		</div>
-		<a href="#" class="bottom-scroll">Scroll</a>
+		<a href="#storyComponent" class="bottom-scroll">Scroll</a>
 	</div>
 </div>
 <?php endif; ?>

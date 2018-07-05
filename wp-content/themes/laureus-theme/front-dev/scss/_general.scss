@@ -184,13 +184,49 @@ body {
 	font-family: $regular; 
   font-size: 16px;
   color: $txtgrey;
-  a{
+  moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; 
+  a {
     transition: all 0.3s;
     &:hover{
       transition: all 0.3s;
       text-decoration: none;
     }
   }
+  
+  // Quotes tyles
+  blockquote {
+    border: none;
+    position: relative;
+    margin: em(15) 0;
+    padding: em(20);
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 71px;
+      height: 52px;
+      z-index: -1;
+    }
+    &::after {
+      background-image: url('../img/icons/quote-left-grey.png');
+      top: 0;
+      left: 0;
+    }
+    &::before {
+      background-image: url('../img/icons/quote-right-grey.png');
+      bottom: 0;
+      right: 0;
+    }
+    p {
+      font-size: em(20);
+      color: $dgrey;
+    }
+  }
+
   img {
     max-width: 100%;
     height: auto;

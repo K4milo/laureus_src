@@ -25,6 +25,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <div class="side-links visible-xs">
+        <?php
+        //Menu Call
+          wp_nav_menu( 
+            array(
+              'theme_location'    => 'navbar-top',
+              'menu_class'        => 'nav navbar-side'
+            )
+          );
+        ?>
+      </div>
       <a class="navbar-brand visible-xs logo-mobile" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
     </div>
     <div class="collapse navbar-collapse" id="navbar">
@@ -52,15 +63,7 @@
         ?>
       </div>
       <div class="menu-mobile">
-        <?php
-        //Menu Call
-          wp_nav_menu( 
-            array(
-              'theme_location'    => 'navbar-top',
-              'menu_class'        => 'nav navbar-side'
-            )
-          );
-        ?>
+        <a class="navbar-brand visible-xs logo-mobile" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
 
         <?php
         //Menu Call
@@ -69,6 +72,16 @@
               'theme_location'    => 'navbar-main',
               'depth'             => 2,
               'menu_class'        => 'nav navbar-nav'
+            )
+          );
+        ?>
+
+        <?php
+        //Menu Call
+          wp_nav_menu( 
+            array(
+              'theme_location'    => 'navbar-top',
+              'menu_class'        => 'nav navbar-side'
             )
           );
         ?>

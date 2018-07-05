@@ -108,18 +108,18 @@
 // "\2192" outputs ascii character "→"
 // "\2022" outputs ascii character "•"
 
-$slick-font-path: "../fonts/slick/" !default;
-$slick-font-family: "slick" !default;
+$slick-font-path: "../fonts/" !default;
+$slick-font-family: 'FontAwesome' !default;
 $slick-loader-path: "./" !default;
-$slick-arrow-color: white !default;
+$slick-arrow-color: $dblue;
 $slick-dot-color: black !default;
 $slick-dot-color-active: $slick-dot-color !default;
-$slick-prev-character: "\2190" !default;
-$slick-next-character: "\2192" !default;
+$slick-prev-character: "\f104";
+$slick-next-character: "\f105";
 $slick-dot-character: "\2022" !default;
 $slick-dot-size: 6px !default;
-$slick-opacity-default: 0.75 !default;
-$slick-opacity-on-hover: 1 !default;
+$slick-opacity-default: 1 !default;
+$slick-opacity-on-hover: 0.9 !default;
 $slick-opacity-not-active: 0.25 !default;
 
 @function slick-image-url($url) {
@@ -149,13 +149,13 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 /* Icons */
-@if $slick-font-family == "slick" {
+@if $slick-font-family == 'FontAwesome' {
     @font-face {
-        font-family: "slick";
-        src: slick-font-url("slick.eot");
-        src: slick-font-url("slick.eot?#iefix") format("embedded-opentype"), slick-font-url("slick.woff") format("woff"), slick-font-url("slick.ttf") format("truetype"), slick-font-url("slick.svg#slick") format("svg");
+        font-family: 'FontAwesome';
+        src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
+        src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
         font-weight: normal;
-        font-style: normal;
+        font-style: normal; 
     }
 }
 
@@ -165,8 +165,8 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-next {
     position: absolute;
     display: block;
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
     line-height: 0px;
     font-size: 0px;
     cursor: pointer;
@@ -192,7 +192,7 @@ $slick-opacity-not-active: 0.25 !default;
     }
     &:before {
         font-family: $slick-font-family;
-        font-size: 20px;
+        font-size: 40px;
         line-height: 1;
         color: $slick-arrow-color;
         opacity: $slick-opacity-default;
@@ -202,14 +202,14 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
-    left: 25px;
+    left: 0;
     z-index: 10;
     [dir="rtl"] & {
         left: auto;
         right: 25px;
     }
     &:before {
-        content: $slick-prev-character;
+        content: "\f104";
         [dir="rtl"] & {
             content: $slick-next-character;
         }
@@ -217,14 +217,14 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-next {
-    right: 25px;
+    right: 0;
     z-index: 10;
     [dir="rtl"] & {
         left: 25px;
         right: auto;
     }
     &:before {
-        content: $slick-next-character;
+        content: "\f105";
         [dir="rtl"] & {
             content: $slick-prev-character;
         }

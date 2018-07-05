@@ -13,6 +13,7 @@ footer {
 		@include desktop {
 			display: inline-block;
 			text-align: left;
+			vertical-align: top;
 		}
 		&.brand {
 			@include desktop {

@@ -23,7 +23,7 @@
 					<figure class="thumb" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')"></figure>
 					<h4><?php the_title();?></h4>
 					<?php the_excerpt();?>
-					<a href="#">View more</a>
+					<a href="<?php the_permalink();?>">View more</a>
 				</div>
 			</div>
 

@@ -86,6 +86,19 @@
 				text-align: center;
 			}
 		}
+
+		//Arrows
+		.slick-prev {
+		    @include desktop {
+		    	left: -145px;
+			}		    	
+		}
+
+		.slick-next {
+		    @include desktop {
+		    	right: -145px;
+			}		    	
+		}
 	
 		// dots
 		.slick-dots {
@@ -118,6 +131,5 @@
 		        }
 		    }
 		}
-
 	}
 }

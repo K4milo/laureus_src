@@ -11,7 +11,9 @@ body {
 								li {
 									&:last-child {
 										a {
-											background-color: $dblue;
+											@include desktop {
+												background-color: $dblue;
+											}
 										}
 									}
 								}
@@ -24,17 +26,81 @@ body {
 	}
 
 	.navbar {
+
+		// mobile button
+		.navbar-toggle {
+			border: none;
+			background: transparent !important;
+			position: relative;
+			z-index: 10;
+			span {
+				&.icon-bar {
+					background-color: $white;
+					height: em(3);
+				}
+			}
+		}
+
 		&.main-navigation{
-			background-color: $dblue;
+			background-color: transparent;
 			border: none;
 			margin: 0;
 			position: absolute;
 			width: 100%;
 			top: 0;
 			left: 0;
-			@include desktop {
-				background-color: transparent;
+
+			// Specific styles
+			.menu-slide-links-menu-container {
+				display: block;
+				@include desktop {
+					display: block;
+					float: left;
+					margin-top: em(17);
+				}
+				ul{
+					padding: 0;
+					max-width: em(482);
+					margin: em(10);
+					@include desktop {
+						margin: 0;
+					}
+					li {
+						display: inline-block;
+						width: 40%;
+						@include desktop {
+							width: inherit;
+						}
+						a {
+							display: block;
+							padding: em(20);
+							font-size: em(10);
+							padding: em(16) em(5);
+							font-family: $bold;
+							text-align: center;
+							text-transform: uppercase;
+							@include desktop {
+								padding: em(13) em(17);
+								font-size: em(14);
+							}
+						}
+						&:first-child {
+							a {
+								background-color: $crygr;
+								color: $dblue;
+							}
+						}
+						&:last-child {
+							margin-left: -6px;
+							a {
+								background-color: $marine;
+								color: $white;
+							}
+						}
+					}
+				}
 			}
+
 			.container-fluid {
 				// brand
 				.navbar-brand {
@@ -46,9 +112,13 @@ body {
 					width: 235px;
 					height: 61px;
 					text-indent: -9999999px;
+					margin: em(20) auto;
 					@include desktop {
+						margin: 0;
 						display: inline-block;
-						margin: 0 64px;
+						position: absolute;
+						left: 50%;
+						transform: translateX(-50%);
 					}
 					@include smdesktop {
 						margin: 0;
@@ -61,6 +131,13 @@ body {
 
 				// Min Navigation styles
 				#navbar {
+					@include mobile {
+						border: none;
+						position: absolute;
+						width: 100%;
+						top: 0;
+						background-color: $dblue;
+					}
 					//left menu
 					@include desktop {
 						text-align: center;
@@ -71,8 +148,70 @@ body {
 
 					.menu-mobile {
 						display: block;
+						background-color: $dblue;
 						@include desktop {
 							display: none;
+						}
+						
+						// Specific styles
+						.menu-slide-links-menu-container {
+							ul {
+								margin: 0;
+								li {
+									width: 50%;
+								}
+							}
+						}
+						
+						// Main Menu
+						ul {
+							&#menu-main-navigation-1{
+								padding: 0;
+								float: none;
+								li {
+									a {
+										padding: em(8) em(15);
+									}
+								}
+							}
+						}
+
+					}
+
+					.follow-menu {
+						background-color: $dblue;
+						padding: em(30) 0;
+						text-align: center;
+						@include desktop {
+							padding: em(50) 0;
+						}
+						h3 {
+							color: $white;
+							font-size: em(20);
+							font-family: $bold;
+						}
+						ul {
+							padding: em(15) 0;
+							text-align: center;
+							li {
+								display: inline-block;
+								a {
+									color: $white;
+									padding: 0 12px;
+									&:hover {
+										color: $crygr;
+									}
+									i {
+										font-size: 30px;
+										@include desktop {
+											font-size: 35px;
+										} 
+									}
+									@include desktop {
+										padding: 0 20px;
+									}
+								}
+							}
 						}
 					}
 					
@@ -81,45 +220,6 @@ body {
 						overflow: hidden;
 						@include desktop {
 							display: block;
-						}
-					}
-
-					// Specific styles
-					.menu-slide-links-menu-container {
-						display: block;
-						@include desktop {
-							display: block;
-							float: left;
-						}
-						ul{
-							padding: 0;
-							li {
-								display: block;
-								width: 100%;
-								@include desktop {
-									display: inline-block;
-									width: inherit;
-								}
-								a {
-									display: block;
-									padding: em(20);
-									text-align: center;
-									text-transform: uppercase;
-								}
-								&:first-child {
-									a {
-										background-color: $crygr;
-										color: $dblue;
-									}
-								}
-								&:last-child {
-									margin-left: -6px;
-									a {
-										background-color: $marine;
-										color: $white;
-									}
-								}
-							}
 						}
 					}
 				
@@ -136,15 +236,22 @@ body {
 								padding: 0;
 								float: none;
 								li {
-									float: none;
-									display: inline-block;
+									@include desktop {
+										float: none;
+										display: inline-block;
+									}
 									a {
 										color: $white;
-										text-align: center;
 										padding: 0 em(10);
 										font-family: $bold;
 										@include desktop {
 											border-right: 1px solid $white;
+										}
+										@include smdesktop {
+											font-size: em(13);
+										}
+										&:hover {
+											color: $crygr;
 										}
 									}
 									&:last-child {

@@ -36,7 +36,7 @@
 				?>
 
 				<div class="read_more">
-					<a href="/our-team">See all the staff<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+					<a href="/about-us/out-team/">See all the staff<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
 				</div>
 			</div>
 		</div>
