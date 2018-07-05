@@ -26,15 +26,16 @@
 					}
 				},
 				{
-					breakpoint: 600,
+					breakpoint: 980,
 					settings: {
-						slidesToShow: 2,
-						slidesToScroll: 2
+						slidesToShow: 3,
+						slidesToScroll: 3
 					}
 				},
 				{
 					breakpoint: 480,
 					settings: {
+						infinite: true,
 						dots: false,
 						slidesToScroll: 1,
 						centerMode: true,
@@ -50,8 +51,8 @@
 	if(dblue_carousel) {
 		dblue_carousel.slick({
 		dots: true,
-		arrows: false,
 		infinite: true,
+		arrows: false,
 		centerMode: true,
 		speed: 300,
 		slidesToShow: 3,
@@ -63,20 +64,20 @@
 					settings: {
 						slidesToShow: 2,
 						slidesToScroll: 1,
-						infinite: true,
 						dots: true
 					}
 				},
 				{
-					breakpoint: 600,
+					breakpoint: 768,
 					settings: {
 						slidesToShow: 1,
-						slidesToScroll: 1
+						slidesToScroll: 1,
+						infinite: false
 					}
 				}
 			]
 		});
-		// EOF CAROUSEL
+		// EOF CAROUSEl
 	}
 
 	// Select all links with hashes
@@ -126,5 +127,15 @@
 		    time: 1000
 		});
 	}
+
+	// Behavior wrap for hero title
+	var words = $(".hero-title-wrapper header h1").text().split(" ");
+	if(words) {
+		$(".hero-title-wrapper header h1").empty();
+		$.each(words, function(i, v) {
+			$(".hero-title-wrapper header h1").append($("<span class='title-"+i+"'>").text(v));
+		});
+	}
+	
 
 })(jQuery)

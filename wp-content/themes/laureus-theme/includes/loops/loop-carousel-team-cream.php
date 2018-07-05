@@ -1,12 +1,15 @@
-<div id="ambassadorsSection" class="container-fluid">
-	<div class="container beneficiaries-carousel">
-		<h3><span>Our</span>Ambassadors</h3>
-		<div class="carosel-wrapper light-carousel">
+<div id="ambassadorsSection" class="cream-wrapper-main">
+	<div class="container beneficiaries-carousel cream-wrapper">
+		<h3><span>Our</span>Team</h3>
+		<div class="carosel-wrapper light-carousel cream-carousel">
 			<?php
 
+			$theID = $post->ID;
+
 			$args = array(
-				'post_type' => 'ambassadors',
-				'posts_per_page' => -1
+				'post_type' => 'team',
+				'posts_per_page' => -1,
+				'post__not_in' => array($theID)
 			);
 
 			$query = new WP_Query($args);

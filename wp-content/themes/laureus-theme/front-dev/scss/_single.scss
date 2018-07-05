@@ -1,0 +1,54 @@
+// style for sigles team item
+.single-team,
+.single-ambassadors {
+	.hero-title-wrapper  {
+		.container {
+			height: em(250);
+			min-height: em(250);
+		}
+		header {
+			display: none;
+		}
+	}
+
+	.team-single {
+		padding: em(40) 0;
+		.team-item {
+			@include desktop {
+				margin-bottom: em(64);
+			}
+			.thumb {
+				display: block;
+				position: relative;
+				padding-bottom: em(26);
+				@include desktop {
+					display: inline-block;
+					vertical-align: top;
+				}
+				img {
+					max-width: 100%;
+				}
+				@include afterTitle($marine);
+			}
+			.content-wrapper {
+				display: block;
+				@include desktop {
+					display: inline-block;
+					vertical-align: top;
+					padding: 0 em(20);
+					width: 73%;
+				}
+				h3 {
+					margin-top: 0;
+					font-size: 30px;
+					color: $dblue;
+					font-family: $bold;
+				}
+				h4 {
+					font-size: em(18);
+					color: $dblue;
+				}
+			}
+		}
+	}
+}

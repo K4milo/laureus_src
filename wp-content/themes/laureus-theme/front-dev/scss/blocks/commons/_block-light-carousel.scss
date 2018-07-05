@@ -1,3 +1,6 @@
+.cream-wrapper-main {
+	background-color: $cream;
+}
 .beneficiaries-carousel {
 	padding: em(28) 0;
 	@include desktop {
@@ -33,17 +36,28 @@
 	
 	// Light carousel
 	.light-carousel {
+
+		.slick-slide {
+			@include mobile {
+				opacity: 0.4;
+				&.slick-center {
+					opacity: 1;
+				}
+			}
+		}
+
 		.carousel-item  {
 			position: relative;
 			padding: 0 em(10);
 			.inner-wrapper {
+				background-color: $white;
 				position: relative;
 				margin: em(5);
-				min-height: em(400);
+				min-height: em(200);
 				padding-bottom: em(40);
 				tranition: all 0.4s;
 				@include desktop {
-					min-height: em(460);
+					min-height: em(353);
 				}
 				&:hover {
 					border-bottom: 3px solid $marine;
@@ -90,14 +104,14 @@
 		//Arrows
 		.slick-prev {
 		    @include desktop {
-		    	left: -145px;
+		    	left: -65px;
 			}		    	
 		}
 
 		.slick-next {
 		    @include desktop {
-		    	right: -145px;
-			}		    	
+		    	right: -65px;
+			}		    
 		}
 	
 		// dots

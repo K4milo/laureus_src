@@ -33,8 +33,5 @@
 
 // Ceneric block for history page
 .additional-wrapper {
-	padding-top: em(34);
-	@include desktop {
-		padding-top: em(74);
-	}
+	padding-top: 0;
 }

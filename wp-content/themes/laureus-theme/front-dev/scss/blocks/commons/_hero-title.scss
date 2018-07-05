@@ -15,7 +15,6 @@
 	}
 	header {
 		h1 {
-			font-size: 30px;
 			display: block;
 			color: $white;
 			line-height: 1;
@@ -29,11 +28,16 @@
 				bottom: 0;
 				left: 0;
 				text-align: left;
-				font-size: 110px;
 			}
 			span {
-				font-size: 20px;
+				font-size: 30px;
 				display: block;
+				&.title-1 {
+					font-size: 60px;
+					@include desktop {
+						font-size: 110px;
+					}
+				}
 			}
 			&::after {
 				content: "";

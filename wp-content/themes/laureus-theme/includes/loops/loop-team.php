@@ -25,7 +25,7 @@
 					<div class="content-wrapper">
 						<h3><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h3>
 						<h4><?php the_field('ambassador_charge')?></h4>
-						<?php the_excerpt(); ?>
+						<?php the_content(); ?>
 					</div>
 				</div>
 

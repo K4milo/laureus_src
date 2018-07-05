@@ -56,6 +56,14 @@
 						font-family: $book;
 						font-size: em(12);
 					}
+					a {
+						font-family: $bold; 
+						text-transform: uppercase;
+						color: $dblue;
+						font-size: em(13);
+						padding-bottom: em(5);
+						border-bottom: 3px solid $marine;
+					}
 				}
 				&.item__1 {
 					@include desktop {

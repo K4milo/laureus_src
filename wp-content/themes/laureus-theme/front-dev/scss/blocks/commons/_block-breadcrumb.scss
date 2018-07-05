@@ -1,9 +1,9 @@
 .bread-wrapper {
 	background-color: $lgrey6;
 	width: 100%;
-	padding: em(20);
+	padding: em(10);
 	@include desktop {
-		padding: em(29);
+		padding: em(19);
 	}
 	ul {
 		padding: 0;

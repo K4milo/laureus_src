@@ -26,10 +26,10 @@ function create_posttype() {
             'show_in_admin_bar'   => true,
             'menu_position'       => 5,
             'can_export'          => true,
-            'has_archive'         => false,
+            'has_archive'         => true,
             'exclude_from_search' => true,
             'publicly_queryable'  => true,
-            'capability_type'     => 'page',
+            'capability_type'     => 'post'
         )
     );
 
@@ -52,7 +52,7 @@ function create_posttype() {
             'show_in_admin_bar'   => true,
             'menu_position'       => 6,
             'can_export'          => true,
-            'has_archive'         => false,
+            'has_archive'         => true,
             'exclude_from_search' => true,
             'publicly_queryable'  => true,
             'capability_type'     => 'page',
@@ -78,7 +78,7 @@ function create_posttype() {
             'show_in_admin_bar'   => true,
             'menu_position'       => 7,
             'can_export'          => true,
-            'has_archive'         => false,
+            'has_archive'         => true,
             'exclude_from_search' => true,
             'publicly_queryable'  => true,
             'capability_type'     => 'page',
@@ -104,7 +104,7 @@ function create_posttype() {
             'show_in_admin_bar'   => true,
             'menu_position'       => 8,
             'can_export'          => true,
-            'has_archive'         => false,
+            'has_archive'         => true,
             'exclude_from_search' => true,
             'publicly_queryable'  => true,
             'capability_type'     => 'page',
@@ -130,7 +130,7 @@ function create_posttype() {
             'show_in_admin_bar'   => true,
             'menu_position'       => 9,
             'can_export'          => true,
-            'has_archive'         => false,
+            'has_archive'         => true,
             'exclude_from_search' => true,
             'publicly_queryable'  => true,
             'capability_type'     => 'page',

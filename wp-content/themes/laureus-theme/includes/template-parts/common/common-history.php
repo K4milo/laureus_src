@@ -9,7 +9,7 @@
 <?php if($parallax_img || $parallax_content):  ?>
 
 <div id="parallaxBlock">
-	<div class="parallax-wrapper" style="background: url('<?php echo $parallax_img; ?>')">
+	<div class="parallax-wrapper" style="background-image: url('<?php echo $parallax_img; ?>')">
 		<div class="container">
 			<?php echo $parallax_content; ?>
 		</div>
