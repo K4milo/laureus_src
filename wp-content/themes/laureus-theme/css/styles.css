@@ -4556,3 +4556,90 @@ footer {
         margin-top: 2.75em; }
         .work-good .side-good.text-wrapper ul li {
           display: inline-block; }
+
+.feed-grid {
+  background-image: url("../img/bg/blue-pattern.jpg");
+  padding: 2.5em 0; }
+  @media (min-width: 1200px) {
+    .feed-grid {
+      padding: 5em 0; } }
+  .feed-grid .item-feed {
+    background-color: #ffffff;
+    padding: 1.25em 1.875em;
+    box-shadow: 0 0 0.625em #dfdfdf;
+    width: 95%; }
+    .feed-grid .item-feed header img {
+      display: inline-block;
+      margin-right: 0.625em; }
+    .feed-grid .item-feed header h3 {
+      line-height: 0;
+      font-size: 30px;
+      display: inline-block;
+      line-height: 1;
+      font-family: "Gotham Bold";
+      color: #001440;
+      padding-bottom: 20px;
+      position: relative; }
+      @media (min-width: 1200px) {
+        .feed-grid .item-feed header h3 {
+          text-align: left;
+          font-size: 50px; } }
+      .feed-grid .item-feed header h3::after {
+        content: "";
+        display: block;
+        width: 104px;
+        height: 6px;
+        background-color: #00CDCD;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-left: 0; }
+    .feed-grid .item-feed.twitter .wrapper-feed {
+      height: 38.125em;
+      overflow: auto; }
+    .feed-grid .item-feed .wrapper-feed {
+      min-height: 37.5em; }
+      .feed-grid .item-feed .wrapper-feed .feed-item {
+        display: block; }
+        @media (min-width: 1200px) {
+          .feed-grid .item-feed .wrapper-feed .feed-item {
+            margin-bottom: 1.25em; } }
+        .feed-grid .item-feed .wrapper-feed .feed-item figure.thumb {
+          display: block;
+          width: 100%;
+          height: 6.25em;
+          background-size: cover;
+          background-position: top center; }
+          @media (min-width: 1200px) {
+            .feed-grid .item-feed .wrapper-feed .feed-item figure.thumb {
+              width: 28%;
+              height: 6.875em;
+              display: inline-block;
+              vertical-align: top; } }
+        .feed-grid .item-feed .wrapper-feed .feed-item .content-wrapper {
+          padding: 0.625em; }
+          @media (min-width: 1200px) {
+            .feed-grid .item-feed .wrapper-feed .feed-item .content-wrapper {
+              padding: 0.3125em 0.625em;
+              display: inline-block;
+              width: 70%; } }
+          .feed-grid .item-feed .wrapper-feed .feed-item .content-wrapper h4 {
+            font-size: 1em;
+            font-family: "Gotham Bold";
+            margin: 0 0 0.375em; }
+            .feed-grid .item-feed .wrapper-feed .feed-item .content-wrapper h4 a {
+              color: #001440; }
+            @media (min-width: 1200px) {
+              .feed-grid .item-feed .wrapper-feed .feed-item .content-wrapper h4 {
+                font-size: 0.875em;
+                margin-bottom: 0.625em; } }
+          .feed-grid .item-feed .wrapper-feed .feed-item .content-wrapper a {
+            width: 100%;
+            color: #001440;
+            font-family: "Gotham Bold";
+            font-size: 0.75em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center; }
+            .feed-grid .item-feed .wrapper-feed .feed-item .content-wrapper a:hover {
+              color: #00CDCD; }
