@@ -2775,13 +2775,8 @@ footer {
       background-color: #00CDCD;
       position: absolute;
       bottom: 0;
-      left: 50%;
-      margin-left: -52px; }
-      @media (min-width: 1200px) {
-        .single-team .team-single .team-item .thumb::after,
-        .single-ambassadors .team-single .team-item .thumb::after {
-          left: 0;
-          margin-left: 0; } }
+      left: 0;
+      margin-left: 0; }
   .single-team .team-single .team-item .content-wrapper,
   .single-ambassadors .team-single .team-item .content-wrapper {
     display: block; }
@@ -3024,12 +3019,8 @@ footer {
       background-color: #00CDCD;
       position: absolute;
       bottom: 0;
-      left: 50%;
-      margin-left: -52px; }
-      @media (min-width: 1200px) {
-        .team-loop-wrapper .team-item .thumb::after {
-          left: 0;
-          margin-left: 0; } }
+      left: 0;
+      margin-left: 0; }
   .team-loop-wrapper .team-item .content-wrapper {
     display: block; }
     @media (min-width: 1200px) {
@@ -3056,7 +3047,7 @@ footer {
     .grants-loop .grant-item {
       display: inline-block;
       vertical-align: top;
-      width: 19%; } }
+      width: 24%; } }
   .grants-loop .grant-item .inner-wrapper {
     position: relative;
     margin: 0.3125em;
@@ -3456,13 +3447,13 @@ footer {
     display: block;
     color: #F2F5D2;
     width: 90%;
-    margin: 2% auto; }
+    margin: 2% auto 3%; }
     @media (min-width: 1200px) {
       .team-list .container .team-wrapper .team-item {
         display: inline-block;
         vertical-align: top;
         width: 18%;
-        margin: 0 1% 0 0; } }
+        margin: 0 1% 2% 0; } }
     .team-list .container .team-wrapper .team-item img {
       width: 100%;
       height: auto; }
@@ -3530,7 +3521,10 @@ footer {
     .bread-wrapper ul li {
       display: inline-block;
       font-family: "Gotham Book";
-      font-size: 1.125em; }
+      font-size: 0.875em; }
+      @media (min-width: 1200px) {
+        .bread-wrapper ul li {
+          font-size: 1.125em; } }
       .bread-wrapper ul li .sep {
         display: inline-block;
         color: #001440;
@@ -3550,6 +3544,128 @@ footer {
     text-align: center;
     color: #ffffff;
     font-size: 1.875em; }
+
+.wrapper-related {
+  position: relative;
+  text-align: center; }
+  .wrapper-related.block {
+    padding-top: 3.75em;
+    padding-bottom: 3.75em; }
+    @media (min-width: 1200px) {
+      .wrapper-related.block {
+        padding-top: 6.875em;
+        padding-bottom: 6.875em; } }
+    .wrapper-related.block .item {
+      display: inline-block;
+      vertical-align: top;
+      margin: 1.25em auto;
+      border-bottom: 3px solid #00CDCD;
+      box-shadow: 0 0 0.625em #dfdfdf;
+      text-align: left;
+      padding: 0 2.5em 0.625em;
+      width: 21.4375em;
+      height: 21.4375em; }
+      @media (min-width: 1200px) {
+        .wrapper-related.block .item {
+          padding: 0 2.5em 0.625em;
+          margin: 0 2.5em;
+          width: 27.6875em;
+          height: 27.6875em; } }
+      .wrapper-related.block .item figure {
+        margin: 1.0625em 1em;
+        text-align: left; }
+        .wrapper-related.block .item figure img {
+          display: inline-block; }
+      .wrapper-related.block .item h3 {
+        line-height: 0;
+        font-size: 30px;
+        display: block;
+        line-height: 1;
+        font-family: "Gotham Bold";
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        position: relative;
+        text-align: center; }
+        @media (min-width: 1200px) {
+          .wrapper-related.block .item h3 {
+            text-align: left;
+            font-size: 45px; } }
+        .wrapper-related.block .item h3::after {
+          content: "";
+          display: block;
+          width: 104px;
+          height: 6px;
+          background-color: #00CDCD;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          margin-left: 0; }
+        .wrapper-related.block .item h3 a {
+          color: #001440; }
+          .wrapper-related.block .item h3 a:hover {
+            color: #D4D743; }
+      .wrapper-related.block .item p {
+        font-size: 1.25em; }
+  .wrapper-related.inline {
+    padding-top: 3.75em;
+    padding-bottom: 3.75em;
+    background-image: url("../img/bg/blue-pattern.jpg"); }
+    @media (min-width: 1200px) {
+      .wrapper-related.inline {
+        padding-top: 6.875em;
+        padding-bottom: 6.875em; } }
+    .wrapper-related.inline .item {
+      display: inline-block;
+      vertical-align: top;
+      margin: 1.25em auto;
+      text-align: left;
+      padding: 0.625em 1.25em;
+      width: 90%;
+      background-color: #ffffff; }
+      @media (min-width: 1200px) {
+        .wrapper-related.inline .item {
+          padding: 1.25em 1.375em;
+          margin: 0 1.25em;
+          width: 30%;
+          min-height: 170px; } }
+      .wrapper-related.inline .item figure {
+        display: inline-block;
+        vertical-align: middle;
+        width: 20%; }
+      .wrapper-related.inline .item h3 {
+        display: inline-block;
+        vertical-align: middle;
+        width: 70%;
+        font-size: 30px;
+        line-height: 1;
+        font-family: "Gotham Bold";
+        padding-bottom: 20px;
+        position: relative; }
+        .wrapper-related.inline .item h3 span {
+          display: block;
+          line-height: 1;
+          font-size: 20px; }
+          @media (min-width: 1200px) {
+            .wrapper-related.inline .item h3 span {
+              font-size: 27px; } }
+        @media (min-width: 1200px) {
+          .wrapper-related.inline .item h3 {
+            font-size: 50px;
+            margin-left: 20px; } }
+        .wrapper-related.inline .item h3::after {
+          content: "";
+          display: block;
+          width: 104px;
+          height: 6px;
+          background-color: #00CDCD;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          margin-left: 0; }
+        .wrapper-related.inline .item h3 a {
+          color: #001440; }
+          .wrapper-related.inline .item h3 a:hover {
+            color: #D4D743; }
 
 .hero-title-wrapper {
   background-size: cover;
@@ -3572,21 +3688,26 @@ footer {
     padding-bottom: 20px;
     margin-bottom: 30px;
     position: relative;
-    text-align: center; }
+    text-align: left;
+    font-size: 60px; }
     @media (min-width: 1200px) {
       .hero-title-wrapper header h1 {
         position: absolute;
         bottom: 0;
         left: 0;
-        text-align: left; } }
+        text-align: left;
+        font-size: 90px; } }
+    @media (max-width: 767px) {
+      .hero-title-wrapper header h1 {
+        padding-top: 160px; } }
     .hero-title-wrapper header h1 span {
-      font-size: 30px;
-      display: block; }
-      .hero-title-wrapper header h1 span.title-1 {
-        font-size: 60px; }
-        @media (min-width: 1200px) {
-          .hero-title-wrapper header h1 span.title-1 {
-            font-size: 110px; } }
+      font-size: 60px; }
+      @media (min-width: 1200px) {
+        .hero-title-wrapper header h1 span {
+          font-size: 110px; } }
+      .hero-title-wrapper header h1 span.title-0 {
+        font-size: 30px;
+        display: block; }
     .hero-title-wrapper header h1::after {
       content: "";
       display: block;
@@ -3994,14 +4115,13 @@ footer {
         font-size: 1.25em; }
       .about-history-content .side-history.text h3 {
         line-height: 0;
-        font-size: 30px;
+        font-size: 60px;
         display: block;
         line-height: 1;
         font-family: "Gotham Bold";
         padding-bottom: 20px;
         margin-bottom: 30px;
-        position: relative;
-        text-align: center; }
+        position: relative; }
         @media (min-width: 1200px) {
           .about-history-content .side-history.text h3 {
             text-align: left;
@@ -4014,12 +4134,8 @@ footer {
           background-color: #00CDCD;
           position: absolute;
           bottom: 0;
-          left: 50%;
-          margin-left: -52px; }
-          @media (min-width: 1200px) {
-            .about-history-content .side-history.text h3::after {
-              left: 0;
-              margin-left: 0; } }
+          left: 0;
+          margin-left: 0; }
       .about-history-content .side-history.text p {
         font-size: 1.25em; }
       .about-history-content .side-history.text a {
@@ -4106,12 +4222,8 @@ footer {
           background-color: #00CDCD;
           position: absolute;
           bottom: 0;
-          left: 50%;
-          margin-left: -52px; }
-          @media (min-width: 1200px) {
-            .work-cities .side-city.text-wrapper h3::after {
-              left: 0;
-              margin-left: 0; } }
+          left: 0;
+          margin-left: 0; }
       .work-cities .side-city.text-wrapper p {
         font-size: 1.25em; }
       .work-cities .side-city.text-wrapper a {
@@ -4179,12 +4291,8 @@ footer {
           background-color: #00CDCD;
           position: absolute;
           bottom: 0;
-          left: 50%;
-          margin-left: -52px; }
-          @media (min-width: 1200px) {
-            .work-good .side-good.text-wrapper h3::after {
-              left: 0;
-              margin-left: 0; } }
+          left: 0;
+          margin-left: 0; }
       .work-good .side-good.text-wrapper p {
         font-size: 1.25em; }
       .work-good .side-good.text-wrapper a {

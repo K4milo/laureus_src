@@ -26,6 +26,9 @@
       // History Block
       get_template_part('includes/template-parts/work/work','league'); 
 
+      // Related Posts
+      get_template_part('includes/common/common','related-block'); 
+
       // Patrons inline
       get_template_part('includes/loops/loop-patrons-inline');
 

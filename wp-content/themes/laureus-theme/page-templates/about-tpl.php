@@ -18,7 +18,10 @@
       get_template_part('includes/template-parts/about/about','content'); 
 
       // History Block
-      get_template_part('includes/template-parts/about/about','history'); 
+      get_template_part('includes/template-parts/about/about','history');
+
+      // Related Posts
+      get_template_part('includes/common/common','related-block'); 
 
       // Team inline
       get_template_part('includes/loops/loop-team-inline');

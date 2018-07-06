@@ -6,12 +6,23 @@
 
 get_header();
 
-	while(have_posts()):the_post();
+	  while(have_posts()):the_post();
 
-?>
+		// Hero Title
+		get_template_part('includes/common/common','herotitle');
 
+	    // Breadcrumb
+	    get_template_part('includes/common/common','breadcrumb');
 
-<?php
-	endwhile;
+	    // Site Content
+	    get_template_part('includes/template-parts/common/contact','content'); 
+	    
+	    // Patrons inline
+	    get_template_part('includes/loops/loop-patrons-inline');
 
-get_footer(); ?>
+	    // Prefooter
+	    get_template_part('includes/common/common','prefooter');
+
+	  endwhile;
+
+	get_footer(); ?>

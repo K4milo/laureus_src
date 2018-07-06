@@ -137,6 +137,83 @@ function create_posttype() {
         )
     );
 
+    //Post Type Events
+
+    register_post_type( 'events',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Events' ),
+                'singular_name' => __( 'Event' )
+            ),
+            'rewrite' => array('slug' => 'event'),
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields'),
+            'public' => true,
+            'hierarchical'        => false,
+            'show_ui'             => true,
+            'show_in_menu'        => true,
+            'show_in_nav_menus'   => true,
+            'show_in_admin_bar'   => true,
+            'menu_position'       => 10,
+            'can_export'          => true,
+            'has_archive'         => true,
+            'exclude_from_search' => true,
+            'publicly_queryable'  => true,
+            'capability_type'     => 'page',
+        )
+    );
+
+    //Post Type News
+
+    register_post_type( 'news',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'News' ),
+                'singular_name' => __( 'New' )
+            ),
+            'rewrite' => array('slug' => 'news'),
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields'),
+            'public' => true,
+            'hierarchical'        => false,
+            'show_ui'             => true,
+            'show_in_menu'        => true,
+            'show_in_nav_menus'   => true,
+            'show_in_admin_bar'   => true,
+            'menu_position'       => 11,
+            'can_export'          => true,
+            'has_archive'         => true,
+            'exclude_from_search' => true,
+            'publicly_queryable'  => true,
+            'capability_type'     => 'page',
+        )
+    );
+
+    // Post Type for contacts
+    register_post_type( 'contacts',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Contacts' ),
+                'singular_name' => __( 'Contact' )
+            ),
+            'rewrite' => array('slug' => 'contact'),
+            'supports' => array( 'title', 'custom-fields'),
+            'public' => true,
+            'hierarchical'        => false,
+            'show_ui'             => true,
+            'show_in_menu'        => true,
+            'show_in_nav_menus'   => true,
+            'show_in_admin_bar'   => true,
+            'menu_position'       => 12,
+            'can_export'          => true,
+            'has_archive'         => false,
+            'exclude_from_search' => true,
+            'publicly_queryable'  => true,
+            'capability_type'     => 'page',
+        )
+    );
+
     
     ////////////////////
     // TAXONOMIES
@@ -167,6 +244,32 @@ function create_posttype() {
         'rest_controller_class' => 'WP_REST_Terms_Controller',
         'query_var' => true,
         'rewrite' => array( 'slug' => 'ambassador-type' ),
+    )); 
+
+    $media_labels = array(
+        'name' => _x( 'Member Types', 'type of Members' ),
+        'singular_name' => _x( 'Member Type', 'type media' ),
+        'search_items' =>  __( 'Search Member Types' ),
+        'all_items' => __( 'All Member Types' ),
+        'parent_item' => __( 'Parent Member Type' ),
+        'parent_item_colon' => __( 'Parent Type:' ),
+        'edit_item' => __( 'Edit Type' ), 
+        'update_item' => __( 'Update Member Type' ),
+        'add_new_item' => __( 'Add New Member Type' ),
+        'new_item_name' => __( 'New Type Number' ),
+        'menu_name' => __( 'Member Type' ),
+    ); 
+
+    register_taxonomy('member_type', array('team'), array(
+        'hierarchical' => true,
+        'labels' => $media_labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'show_in_rest' => true,
+        'rest_base' => 'memeber-type',
+        'rest_controller_class' => 'WP_REST_Terms_Controller',
+        'query_var' => true,
+        'rewrite' => array( 'slug' => 'member-type' ),
     ));  
 
 }

@@ -34,14 +34,13 @@
 			}
 			h3 {
 				line-height: 0;
-				font-size: 30px;
+				font-size: 60px;
 				display: block;
 				line-height: 1;
 				font-family: $bold;
 				padding-bottom: 20px;
 				margin-bottom: 30px;
 				position: relative;
-				text-align: center;
 				@include desktop {
 					text-align: left;
 					font-size: 110px;

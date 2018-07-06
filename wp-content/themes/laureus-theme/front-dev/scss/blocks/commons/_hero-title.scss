@@ -22,21 +22,26 @@
 			padding-bottom: 20px;
 			margin-bottom: 30px;
 			position: relative;
-			text-align: center;
+			text-align: left;
+			font-size: 60px;
 			@include desktop {
 				position: absolute;
 				bottom: 0;
 				left: 0;
 				text-align: left;
+				font-size: 90px;
+			}
+			@include mobile {
+				padding-top: 160px; 
 			}
 			span {
-				font-size: 30px;
-				display: block;
-				&.title-1 {
-					font-size: 60px;
-					@include desktop {
-						font-size: 110px;
-					}
+				font-size: 60px;
+				@include desktop {
+					font-size: 110px;
+				}
+				&.title-0 {
+					font-size: 30px;
+					display: block;
 				}
 			}
 			&::after {

@@ -1,0 +1,121 @@
+.wrapper-related {
+	position: relative;
+	text-align: center; 
+	&.block {
+		padding-top: em(60);
+		padding-bottom: em(60);
+		@include desktop {
+			padding-top: em(110);
+			padding-bottom: em(110);
+		}
+		.item {
+			display: inline-block;
+			vertical-align: top;
+			margin: em(20) auto;
+			border-bottom: 3px solid $marine;
+			box-shadow: 0 0 em(10) $lgrey;
+			text-align: left;
+			padding: 0 em(40) em(10);
+			width: em(343);
+			height: em(343);
+			@include desktop {
+				padding: 0 em(40) em(10);
+				margin: 0 em(40);
+				width: em(443);
+				height: em(443);
+			}
+			figure {
+				margin: em(17) em(16);
+				text-align: left;
+				img {
+					display: inline-block;
+				}
+			}
+			h3 {
+				line-height: 0;
+				font-size: 30px;
+				display: block;
+				line-height: 1;
+				font-family: $bold;
+				padding-bottom: 20px;
+				margin-bottom: 30px;
+				position: relative;
+				text-align: center;
+				@include desktop {
+					text-align: left;
+					font-size: 45px;
+				}
+				@include afterTitle($marine);
+				a {
+					color: $dblue;
+					&:hover {
+						color: $crygr;
+					}
+				}
+			}
+			p {
+				font-size: em(20);
+			}
+		}
+	}
+
+	&.inline {
+		padding-top: em(60);
+		padding-bottom: em(60);
+		background-image: url('../img/bg/blue-pattern.jpg');
+		@include desktop {
+			padding-top: em(110);
+			padding-bottom: em(110);
+		}
+
+		.item {
+			display: inline-block;
+			vertical-align: top;
+			margin: em(20) auto;
+			text-align: left;
+			padding: em(10) em(20);
+			width: 90%;
+			background-color: $white;
+			@include desktop {
+				padding: em(20) em(22);
+				margin: 0 em(20);
+				width: 30%;
+				min-height: 170px;
+			}
+			figure {
+				display: inline-block;
+				vertical-align: middle;
+				width: 20%;
+			}
+			h3 {
+				display: inline-block;
+				vertical-align: middle;
+				width: 70%;
+				font-size: 30px;
+				line-height: 1;
+				font-family: $bold;
+				padding-bottom: 20px;
+				position: relative;
+				span {
+					display: block;
+					line-height: 1;
+					font-size: 20px;
+					@include desktop {
+						font-size: 27px;
+					}
+				}
+				@include desktop {
+					font-size: 50px;
+					margin-left: 20px;
+				}
+				@include afterTitle($marine);
+				a {
+					color: $dblue;
+					&:hover {
+						color: $crygr;
+					}
+				}
+			}
+		}
+	}
+}

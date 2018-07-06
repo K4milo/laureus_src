@@ -18,6 +18,9 @@
     // Patrons inline
     get_template_part('includes/loops/loop-patrons-inline');
 
+    // Inline Posts
+    get_template_part('includes/common/common','single-inline');
+
     // Prefooter
     get_template_part('includes/common/common','prefooter');
 

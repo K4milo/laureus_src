@@ -129,12 +129,28 @@
 	}
 
 	// Behavior wrap for hero title
-	var words = $(".hero-title-wrapper header h1").text().split(" ");
-	if(words) {
-		$(".hero-title-wrapper header h1").empty();
-		$.each(words, function(i, v) {
-			$(".hero-title-wrapper header h1").append($("<span class='title-"+i+"'>").text(v));
+	
+	// Team Script
+	var team_items = $('.team-wrapper .team-item');
+
+	if(team_items) {
+		team_items.each(function(index, el) {
+			var instance = $(this),
+				image_id = instance.data('display');
+
+				if(image_id > 5) {
+					instance.hide();
+				}
+
 		});
+		
+		$('.read_more a').on('click', function(event) {
+			event.preventDefault();
+			/* Act on the event */
+			team_items.fadeIn(500);
+			$(this).hide(300);
+		});
+	
 	}
 	
 
