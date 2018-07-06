@@ -20,6 +20,7 @@
 					breakpoint: 1024,
 					settings: {
 						infinite: true,
+						arrows: false,
 						slidesToScroll: 3,
 						centerMode: true,
 						speed: 300,
@@ -28,22 +29,10 @@
 					}
 				},
 				{
-					breakpoint: 768,
-					settings: {
-						infinite: true,
-						arrows: false,
-						dots: false,
-						slidesToScroll: 2,
-						speed: 300,
-						slidesToShow: 2,
-
-					}
-				},
-				{
 					breakpoint: 480,
 					settings: {
 						infinite: true,
-						arrows: false,
+						arrows: true,
 						dots: false,
 						slidesToScroll: 1,
 						centerMode: true,
