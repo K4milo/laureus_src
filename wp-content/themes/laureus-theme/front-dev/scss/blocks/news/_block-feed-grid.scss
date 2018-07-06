@@ -1,0 +1,97 @@
+.feed-grid {
+	background-image: url('../img/bg/blue-pattern.jpg');
+	padding: em(40) 0;
+	@include desktop {
+		padding: em(80) 0;
+	}
+	.item-feed {
+		background-color: $white;
+		padding: em(20) em(30);
+		box-shadow: 0 0 em(10) $lgrey;
+		width: 95%;
+		header {
+			img {
+				display: inline-block;
+				margin-right: em(10);
+			}
+			h3 {
+				line-height: 0;
+				font-size: 30px;
+				display: inline-block;
+				line-height: 1;
+				font-family: $bold;
+				color: $dblue;
+				padding-bottom: 20px;
+				position: relative;
+				@include desktop {
+					text-align: left;
+					font-size: 50px;
+				}
+				@include afterTitle($marine);
+			}
+		}
+		&.twitter {
+			.wrapper-feed {
+				height: em(610);
+				overflow: auto;
+			}
+		}
+		
+		.wrapper-feed {
+			min-height: em(600);
+			.feed-item {
+				display: block;
+				@include desktop{
+					margin-bottom: em(20);
+				}
+				figure {
+					&.thumb {
+						display: block;
+						width: 100%;
+						height: em(100);
+						background-size: cover;
+						background-position: top center;
+						@include desktop{
+							width: 28%;
+							height: em(110);
+							display: inline-block;
+							vertical-align: top;
+						}
+					}
+				}
+				.content-wrapper {
+					padding: em(10);
+					@include desktop{
+						padding: em(5) em(10);
+						display: inline-block;
+						width: 70%;
+					}
+					h4 {
+						font-size: em(16);
+						font-family: $bold;
+						margin: 0 0 em(6);
+						a {
+							color: $dblue;
+						}
+						@include desktop{
+							font-size: em(14);
+							margin-bottom: em(10);
+						}
+					}
+					a {
+						width: 100%;
+						color: $dblue;
+						font-family: $bold;
+						font-size: em(12);
+						letter-spacing: 2px;
+						text-transform: uppercase;
+						text-align: center;
+						&:hover {
+							color: $marine;
+						}
+					}
+				}
+			}
+		}
+	}
+}

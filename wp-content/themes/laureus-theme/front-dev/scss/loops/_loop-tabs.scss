@@ -1,0 +1,113 @@
+.news-tabs {
+	// Tabs styles
+	.nav-tabs {
+		position: relative;
+		border: none;
+		text-align: center;
+		margin-top: em(45);
+		border-bottom: 1px solid $lgrey;
+		li {
+			float: none;
+			display: inline-block;
+			margin: 0 em(15);
+			@include desktop {
+				margin: 0 em(20);
+			}
+			a {
+				padding: 0;
+				background: transparent;
+				font-size: em(20);
+				font-family: $bold;
+				color: $lgrey;
+				border: none;
+				padding-bottom: em(5);
+				@include desktop {
+					font-size: em(30);
+				}
+
+			}
+			&.active {
+				a {
+					color: $dblue;
+					border-bottom: 5px solid $marine;
+				}
+			}
+		}
+	}
+
+	.news-wrapper {
+		margin-top: em(29);
+		.news-item {
+			display: block;
+			@include desktop{
+				width: 50%;
+				display: inline-block;
+				vertical-align: top;
+				margin-left: -5px;
+				margin-bottom: em(60);
+			}
+			figure {
+				&.thumb {
+					display: block;
+					width: 100%;
+					height: em(250);
+					background-size: cover;
+					background-position: top center;
+					@include desktop{
+						width: 29%;
+						height: em(150);
+						display: inline-block;
+						vertical-align: top;
+					}
+				}
+			}
+			.content-wrapper {
+				padding: em(20);
+				@include desktop{
+					padding: em(5) em(30);
+					display: inline-block;
+					width: 70%;
+				}
+				h4 {
+					font-size: em(25);
+					font-family: $bold;
+					color: $dblue;
+					margin-bottom: em(6);
+					@include desktop{
+						font-size: em(25);
+						margin-bottom: em(10);
+					}
+				}
+				a {
+					width: 100%;
+					color: $dblue;
+					font-family: $bold;
+					font-size: em(14);
+					letter-spacing: 2px;
+					text-transform: uppercase;
+					text-align: center;
+					&:hover {
+						color: $marine;
+					}
+				}
+			}
+			&.item__1 {
+				@include desktop {
+					width: 100%;
+					overflow: hidden;
+					display: flex;
+					margin-bottom: em(2);
+					figure {
+						&.thumb {
+							width: 50%;
+							height: em(580);
+						}
+					}
+					.content-wrapper {
+						width: 50%;
+					}
+				}
+			}
+		}
+	}
+}

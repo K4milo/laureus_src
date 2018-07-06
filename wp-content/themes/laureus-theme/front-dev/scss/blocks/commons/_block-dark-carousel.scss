@@ -1,6 +1,11 @@
 .testimonials-carousel {
 	padding: em(28) 0;
 	background-color: $dblue;
+	background-image: url('../img/bg/bg-testimonials.jpg');
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	@include desktop {
 		padding: em(78) 0;
 	}
@@ -37,43 +42,6 @@
 	// Light carousel
 	.dark-carousel {
 		padding: em(40) 0;
-		.slick-slide {
-			opacity: 0;
-			transition: all 0.3s;
-			&.slick-active {
-				opacity: 0.5;
-			}
-			&.slick-center {
-				opacity: 1;
-				.carousel-item {
-					.inner-wrapper {
-						figure {
-							span {
-								&.photo {
-									width: em(145);
-									height: em(145);
-								}
-							}
-						}
-					}
-				}
-			}
-			.carousel-item {
-				.inner-wrapper {
-					figure {
-						width: em(260);
-						display: inline-block;
-						padding-bottom: em(20);
-						span {
-							&.photo {
-								width: em(115);
-								height: em(115);
-							}
-						}
-					}
-				}
-			}
-		}
 
 		.carousel-item {
 			position: relative;
@@ -81,37 +49,46 @@
 			.inner-wrapper {
 				color: $white;
 				text-align: center;
-				figure {
-					text-align: center;
-					position: relative;
-					span {
-						display: inline-block;
-						&.quote-left{
-							position: absolute;
-							top: 0;
-							left: 0;
-						}
-						&.photo {
-							border: em(2) solid $white;
-							border-radius: 100%;
-						}
-						&.quote-right{
-							position: absolute;
-							bottom: 0;
-							right: 0;
-						}
+				position: relative;
+				.quote-left{
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 1;
+					@include mobile {
+						width: em(25);
+						height: auto;
+					}
+				}
+				.quote-right{
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					z-index: 1;
+					@include mobile {
+						width: em(25);
+						height: auto;
 					}
 				}
 				h3,h4{
+					position: relative;
+					z-index: 1;
 					font-family: $bold;
 					color: $crygr;
 				}
 				h4 {
-					font-size: em(10);
+					position: relative;
+					z-index: 1;
+					font-size: em(20);
 				}
 				p {
+					display: inline-block;
+					max-width: em(540);
+					width: 75%;
+					position: relative;
+					z-index: 1;
 					font-family: $book;
-					font-size: em(12);
+					font-size: em(28);
 					padding:0 em(10);
 				}
 			}
