@@ -3,6 +3,7 @@ footer {
 	padding: em(30) 0;
 	text-align: center;
 	border-top: 1px solid $white;
+	position: relative;
 	@include desktop {
 		padding: em(80) 0;
 	}
@@ -32,19 +33,25 @@ footer {
 				list-style: none;
 				padding: 0;
 				text-align: center;
-				@include desktop {
-					text-align: left;
+				@include mobile {
+					padding-top: em(100);
 				}
 				> li {
 					display: block;
+					display: inline-block;
+					vertical-align: top;
+					width: 46%;
+					text-align: left;
 					@include desktop {
-						display: inline-block;
+						width: inherit;
 						margin-right: em(80);
-						vertical-align: top;
 						font-size: em(18);
 					}
 					a {
-						padding: 0;
+						padding: em(12) em(20);
+						@include desktop {
+							padding: 0;
+						}
 						background: transparent;
 						color: $white;
 						font-family: $bold;
@@ -66,6 +73,12 @@ footer {
 		&.secondary-menu {
 			.green-btn {
 				@include green-btn;
+				@include mobile {
+					position: absolute;
+					top: 124px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
 			}
 		}
 	}

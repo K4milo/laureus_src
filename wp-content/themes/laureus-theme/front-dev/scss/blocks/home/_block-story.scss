@@ -39,9 +39,14 @@
 					position: absolute;
 					display: block;
 					@include centerer;
-					width: em(154);
-					height: em(157);
+					width: em(100);
+					height: em(101);
 					background-image: url('../img/icons/play-icon.png');
+					background-size: 100%;
+					@include desktop {
+						width: em(154);
+						height: em(157);
+					}
 				}
 			}
 		}

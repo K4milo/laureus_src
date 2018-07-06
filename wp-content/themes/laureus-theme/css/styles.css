@@ -2727,7 +2727,8 @@ footer {
   background-color: #001440;
   padding: 1.875em 0;
   text-align: center;
-  border-top: 1px solid #ffffff; }
+  border-top: 1px solid #ffffff;
+  position: relative; }
   @media (min-width: 1200px) {
     footer {
       padding: 5em 0; } }
@@ -2752,22 +2753,28 @@ footer {
       list-style: none;
       padding: 0;
       text-align: center; }
-      @media (min-width: 1200px) {
+      @media (max-width: 767px) {
         footer .footer-section.sitemap ul#menu-footer-menu {
-          text-align: left; } }
+          padding-top: 6.25em; } }
       footer .footer-section.sitemap ul#menu-footer-menu > li {
-        display: block; }
+        display: block;
+        display: inline-block;
+        vertical-align: top;
+        width: 46%;
+        text-align: left; }
         @media (min-width: 1200px) {
           footer .footer-section.sitemap ul#menu-footer-menu > li {
-            display: inline-block;
+            width: inherit;
             margin-right: 5em;
-            vertical-align: top;
             font-size: 1.125em; } }
         footer .footer-section.sitemap ul#menu-footer-menu > li a {
-          padding: 0;
+          padding: 0.75em 1.25em;
           background: transparent;
           color: #ffffff;
           font-family: "Gotham Bold"; }
+          @media (min-width: 1200px) {
+            footer .footer-section.sitemap ul#menu-footer-menu > li a {
+              padding: 0; } }
         footer .footer-section.sitemap ul#menu-footer-menu > li ul {
           list-style: none;
           padding: 0; }
@@ -2786,6 +2793,12 @@ footer {
       footer .footer-section.secondary-menu .green-btn:hover {
         color: #ffffff;
         background-color: #00CDCD; }
+      @media (max-width: 767px) {
+        footer .footer-section.secondary-menu .green-btn {
+          position: absolute;
+          top: 124px;
+          left: 50%;
+          transform: translateX(-50%); } }
 
 .single-team .hero-title-wrapper .container,
 .single-ambassadors .hero-title-wrapper .container {
@@ -3928,9 +3941,14 @@ footer {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 9.625em;
-        height: 9.8125em;
-        background-image: url("../img/icons/play-icon.png"); }
+        width: 6.25em;
+        height: 6.3125em;
+        background-image: url("../img/icons/play-icon.png");
+        background-size: 100%; }
+        @media (min-width: 1200px) {
+          .story-home-block .side-story.video-wrapper a.play-icon {
+            width: 9.625em;
+            height: 9.8125em; } }
     .story-home-block .side-story.text-wrapper {
       background-color: #ffffff;
       padding: 2.625em; }

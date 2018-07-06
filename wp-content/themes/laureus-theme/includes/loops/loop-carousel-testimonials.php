@@ -20,15 +20,6 @@
 				?>
 				<div class="carousel-item testimonial-carousel__item">
 					<div class="inner-wrapper">
-						<figure class="thumb">
-							<span class="quote quote-left">
-								<img src="<?php bloginfo('template_url');?>/img/icons/quote-left.png" alt="quote <?php the_title();?>" />
-							</span>
-							<span class="photo" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')"></span>
-							<span class="quote quote-right">
-								<img src="<?php bloginfo('template_url');?>/img/icons/quote-right.png" alt="quote <?php the_title();?>" />
-							</span>
-						</figure>
 						<div class="quote-content">
 							<i><?php the_content();?></i>
 							<h3><?php the_title();?></h3>
