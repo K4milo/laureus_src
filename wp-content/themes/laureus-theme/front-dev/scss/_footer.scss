@@ -55,6 +55,9 @@ footer {
 						background: transparent;
 						color: $white;
 						font-family: $bold;
+						&:hover {
+							color: $marine;
+						}
 					}
 					ul {
 						list-style: none;

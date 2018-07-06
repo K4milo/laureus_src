@@ -2,7 +2,9 @@
 	position: relative;
 	height: 100vh;
 	min-height: em(600);
-	background-color: $marine-dk;
+	background-color: $dblue;
+	background-image: url('../img/bg/hero-image.jpg');
+	background-size: cover;
 	&::before {
 		content:"";
 		display: block;
@@ -13,6 +15,7 @@
 		height: 80px;
 		background-color: $white;
 	}
+	/*
 	&::after {
 		content: "";
 		position: absolute; 
@@ -21,7 +24,7 @@
 		background-image: url('../img/misc/pattern-hero.png');
 		background-repeat: no-repeat;
 		background-position: center;
-	}
+	}*/
 	.hero-caption {
 		position: absolute;
 		max-width: em(586);
