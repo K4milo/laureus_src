@@ -16,13 +16,14 @@
 
 			?>
 			<div class="carousel-item ambassador-carousel__item">
-				
-				<div class="inner-wrapper">
-					<figure class="thumb" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')"></figure>
-					<h4><?php the_title();?></h4>
-					<?php the_excerpt();?>
-					<a href="<?php the_permalink();?>">View more</a>
-				</div>
+				<a href="<?php the_permalink();?>">
+					<div class="inner-wrapper">
+						<figure class="thumb" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')"></figure>
+						<h4><?php the_title();?></h4>
+						<?php the_excerpt();?>
+						<a href="<?php the_permalink();?>" class="view-more">View more</a>
+					</div>
+				</a>
 			</div>
 
 			<?php 

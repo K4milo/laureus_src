@@ -85,21 +85,24 @@
 				font-family: $book;
 				font-size: em(14);
 				padding:0 em(10);
+				color: $txtgrey;
 			}
 			a {
-				display: none;
-				position: absolute;
-				bottom: em(6);
-				left: 0;
-				width: 100%;
-				color: $dblue;
-				font-family: $bold;
-				font-size: em(11);
-				letter-spacing: 2px;
-				text-transform: uppercase;
-				text-align: center;
-				&:hover {
-					color: $marine;
+				&.view-more{
+					display: none;
+					position: absolute;
+					bottom: em(6);
+					left: 0;
+					width: 100%;
+					color: $dblue;
+					font-family: $bold;
+					font-size: em(11);
+					letter-spacing: 2px;
+					text-transform: uppercase;
+					text-align: center;
+					&:hover {
+						color: $marine;
+					}
 				}
 			}
 		}

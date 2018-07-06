@@ -3328,8 +3328,9 @@ footer {
     .beneficiaries-carousel .light-carousel .carousel-item p {
       font-family: "Gotham-Book-Font";
       font-size: 0.875em;
-      padding: 0 0.625em; }
-    .beneficiaries-carousel .light-carousel .carousel-item a {
+      padding: 0 0.625em;
+      color: #666666; }
+    .beneficiaries-carousel .light-carousel .carousel-item a.view-more {
       display: none;
       position: absolute;
       bottom: 0.375em;
@@ -3341,7 +3342,7 @@ footer {
       letter-spacing: 2px;
       text-transform: uppercase;
       text-align: center; }
-      .beneficiaries-carousel .light-carousel .carousel-item a:hover {
+      .beneficiaries-carousel .light-carousel .carousel-item a.view-more:hover {
         color: #00CDCD; }
   @media (min-width: 1200px) {
     .beneficiaries-carousel .light-carousel .slick-prev {
@@ -3761,7 +3762,7 @@ footer {
       text-align: left;
       padding: 0 2.5em 0.625em;
       width: 21.4375em;
-      height: 21.4375em; }
+      height: auto; }
       @media (min-width: 1200px) {
         .wrapper-related.block .item {
           padding: 0 2.5em 0.625em;
@@ -4213,7 +4214,7 @@ footer {
     position: absolute;
     top: 40px;
     left: 34px;
-    z-index: 3; }
+    z-index: 10; }
     @media (min-width: 1200px) {
       .involved-home-block h3 {
         top: 60px;

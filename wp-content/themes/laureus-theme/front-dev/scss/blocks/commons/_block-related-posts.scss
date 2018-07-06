@@ -17,7 +17,7 @@
 			text-align: left;
 			padding: 0 em(40) em(10);
 			width: em(343);
-			height: em(343);
+			height: auto;
 			@include desktop {
 				padding: 0 em(40) em(10);
 				margin: 0 em(40);
