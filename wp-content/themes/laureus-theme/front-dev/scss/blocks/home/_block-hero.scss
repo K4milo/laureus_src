@@ -1,6 +1,7 @@
 .hero-home-block {
 	position: relative;
 	height: 100vh;
+	min-height: em(600);
 	background-color: $marine-dk;
 	&::before {
 		content:"";

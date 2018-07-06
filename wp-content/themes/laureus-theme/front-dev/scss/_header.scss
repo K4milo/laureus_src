@@ -11,8 +11,9 @@ body {
 								li {
 									&:last-child {
 										a {
-											@include desktop {
-												background-color: $dblue;
+											background-color: $dblue;
+											&:hover {
+												background-color: $marine;
 											}
 										}
 									}
@@ -58,6 +59,14 @@ body {
 					float: left;
 					margin-top: em(17);
 				}
+				@include tablet {
+					display: block;
+					position: absolute;
+					width: 365px;
+					top: 0;
+					right: 0;
+					text-align: right;
+				}
 				ul{
 					padding: 0;
 					max-width: em(482);
@@ -88,6 +97,10 @@ body {
 							a {
 								background-color: $crygr;
 								color: $dblue;
+								&:hover {
+									background-color: $marine;
+									color: $white;
+								}
 							}
 						}
 						&:last-child {
@@ -95,6 +108,9 @@ body {
 							a {
 								background-color: $marine;
 								color: $white;
+								&:hover {
+									background-color: $crygr;
+								}
 							}
 						}
 					}
@@ -127,6 +143,11 @@ body {
 						background-size: contain;
 						background-repeat: no-repeat;	
 					}
+					//left menu
+					@include tablet {
+						display: inline-block;
+						float: left;
+					}
 				}
 
 				// Min Navigation styles
@@ -152,6 +173,11 @@ body {
 						@include desktop {
 							display: none;
 						}
+
+						//left menu
+						@include tablet {
+							display: none;
+						}
 						
 						// Specific styles
 						.menu-slide-links-menu-container {
@@ -159,6 +185,11 @@ body {
 								margin: 0;
 								li {
 									width: 50%;
+									&:last-child {
+										a {
+											background-color: $marine;
+										}
+									}
 								}
 							}
 						}
@@ -175,7 +206,6 @@ body {
 								}
 							}
 						}
-
 					}
 
 					.follow-menu {
@@ -221,6 +251,10 @@ body {
 						@include desktop {
 							display: block;
 						}
+						//left menu
+						@include tablet {
+							display: block;
+						}
 					}
 				
 					// main menu
@@ -231,6 +265,7 @@ body {
 							float: right;
 							padding-top: em(18);
 						}
+
 						ul {
 							&.nav{
 								padding: 0;
@@ -250,6 +285,10 @@ body {
 										@include smdesktop {
 											font-size: em(13);
 										}
+										//left menu tblet
+										@include tablet {
+											font-size: em(14);
+										}
 										&:hover {
 											color: $crygr;
 										}
@@ -259,6 +298,19 @@ body {
 											border-right: none;	
 										}
 									}
+									//left menu tblet
+									@include tablet {
+										position: relative;
+										display: inline-block;
+										float: none;
+									}
+								}
+								//left menu tblet
+								@include tablet {
+									padding: 0;
+									float: none;
+									margin-top: 56px;
+									text-align: right;
 								}
 							}
 						}

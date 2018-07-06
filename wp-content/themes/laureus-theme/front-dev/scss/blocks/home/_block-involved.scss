@@ -41,6 +41,10 @@
 		@include desktop {
 			display: flex;
 		}
+		@include tablet {
+			display: block;
+			overflow: hidden;	
+		}
 		li {
 			display: block;
 			height: em(200);
@@ -49,7 +53,15 @@
 			position: relative;
 			transition: all 0.4s;
 			@include desktop {
-				height: em(550);
+				height: em(650);
+			}
+			@include tablet {
+				width:50%;	
+				float: left;
+				height: em(350);
+				&:last-child{
+					width: 100%;
+				}
 			}
 			> a {
 				position: absolute;
