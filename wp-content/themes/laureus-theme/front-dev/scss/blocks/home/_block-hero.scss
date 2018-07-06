@@ -62,5 +62,8 @@
 		font-family: $bold;	
 		color: $white;
 		z-index: 1;
+		&:hover {
+			color: $crygr;
+		}
 	}
 }

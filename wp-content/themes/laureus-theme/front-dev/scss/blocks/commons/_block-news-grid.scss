@@ -47,6 +47,7 @@
 					background-color: $cream;
 					min-height: em(250);
 					padding: em(30);
+					border: 1px solid $marine;
 					h4 {
 						font-size: em(16);
 						font-family: $bold;
@@ -63,6 +64,9 @@
 						font-size: em(13);
 						padding-bottom: em(5);
 						border-bottom: 3px solid $marine;
+						&:hover {
+							color: $marine;
+						}
 					}
 				}
 				&.item__1 {

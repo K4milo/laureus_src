@@ -22,7 +22,7 @@
 				<div class="hero-caption--text"><?php echo $hero_content; ?></div>
 			<?php endif; ?>
 			<?php if($hero_url): ?>
-				<a href="<?php echo $hero_url; ?>" class="hero-caption--url green-cta"><?php echo $hero_url_text; ?></a>
+				<a href="<?php echo $hero_url; ?>" class="hero-caption--url green-cta" target="_blank"><?php echo $hero_url_text; ?></a>
 			<?php endif; ?>
 		</div>
 		<a href="#storyComponent" class="bottom-scroll">Scroll</a>

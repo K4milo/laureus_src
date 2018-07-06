@@ -9,11 +9,12 @@
 				$args = array(
 					'post_type' => 'team',
 					'posts_per_page' => -1,
+					'order' => 'ASC',
 					'tax_query' => array(
 				        array (
 				            'taxonomy' => 'member_type',
 				            'field' => 'slug',
-				            'terms' => 'staff',
+				            'terms' => 'director',
 				        )
 				    )
 				);
@@ -26,7 +27,11 @@
 				<div class="team-item item__<?php echo $counter; ?>">
 					<figure class="thumb">
 						<a href="<?php the_permalink(); ?>">
-							<img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title();?>">
+							<?php if(has_post_thumbnail()):?>
+								<img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title();?>">
+							<?php else: ?>
+								<img src="<?php bloginfo('template_url'); ?>/img/misc/profile-thumb.png" alt="<?php the_title();?>">
+							<?php endif;?>
 						</a>
 					</figure>
 					<div class="content-wrapper">

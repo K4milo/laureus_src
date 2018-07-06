@@ -173,6 +173,10 @@ $browser-context: 16; // Default
   font-size: em(14);
   text-align: center;
   padding: em(15) em(25);
+  &:hover {
+    color: $white;
+    background-color: $marine;
+  }
 }
 
 
@@ -259,6 +263,14 @@ body {
       top: -9px;
       left: 9px;
       background-color: $dblue;
+      transition: all 0.3s;
+    }
+    &:hover {
+      &::after {
+        transition: all 0.3s;
+        top: 0;
+        left:0;
+      }
     }
   }
 

@@ -14,7 +14,7 @@
 			        array (
 			            'taxonomy' => 'member_type',
 			            'field' => 'slug',
-			            'terms' => 'staff',
+			            'terms' => 'director'
 			        )
 			    )
 			);

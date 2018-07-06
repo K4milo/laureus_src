@@ -91,7 +91,7 @@ function create_posttype() {
     // CPT Options
         array(
             'labels' => array(
-                'name' => __( 'Team Staff' ),
+                'name' => __( 'Our Team' ),
                 'singular_name' => __( 'Team Member' )
             ),
             'rewrite' => array('slug' => 'team'),
@@ -246,23 +246,23 @@ function create_posttype() {
         'rewrite' => array( 'slug' => 'ambassador-type' ),
     )); 
 
-    $media_labels = array(
-        'name' => _x( 'Member Types', 'type of Members' ),
+    $media_labels2 = array(
+        'name' => _x( 'Team Field', 'Team Field' ),
         'singular_name' => _x( 'Member Type', 'type media' ),
-        'search_items' =>  __( 'Search Member Types' ),
-        'all_items' => __( 'All Member Types' ),
-        'parent_item' => __( 'Parent Member Type' ),
-        'parent_item_colon' => __( 'Parent Type:' ),
+        'search_items' =>  __( 'Search Team Field' ),
+        'all_items' => __( 'All Member Team Field' ),
+        'parent_item' => __( 'Parent MemberTeam Field' ),
+        'parent_item_colon' => __( 'ParentTeam Field:' ),
         'edit_item' => __( 'Edit Type' ), 
-        'update_item' => __( 'Update Member Type' ),
-        'add_new_item' => __( 'Add New Member Type' ),
+        'update_item' => __( 'Update Team Field' ),
+        'add_new_item' => __( 'Add New Team Field' ),
         'new_item_name' => __( 'New Type Number' ),
-        'menu_name' => __( 'Member Type' ),
+        'menu_name' => __( 'Team Field' ),
     ); 
 
     register_taxonomy('member_type', array('team'), array(
         'hierarchical' => true,
-        'labels' => $media_labels,
+        'labels' => $media_labels2,
         'show_ui' => true,
         'show_admin_column' => true,
         'show_in_rest' => true,

@@ -88,11 +88,14 @@
 							border-bottom: em(2) solid rgba(255,255,255,0.5);
 						}
 						img {
-							float: left;
+							display: inline-block;
+							vertical-align: middle;
 						}
 						span {
-							display: block;
+							display: inline-block;
+							vertical-align: bottom;
 							text-align: right;
+							width: 70%;
 							h4 {
 								line-height: 1;
 								margin: 0;
@@ -107,7 +110,7 @@
 								font-size: em(30);
 								font-family: $bold;
 								@include desktop {
-									font-size: em(60);
+									font-size: em(48);
 								}
 							}
 						}

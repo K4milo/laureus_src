@@ -9,11 +9,13 @@
 		<div class="row wrapper-related block">
 			<?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
 			    <?php setup_postdata($post); ?>
-			    <div class="item item__block">
-			        <figure><img src="<?php the_field('section_icon'); ?>" alt="<?php the_title(); ?>"></figure>
-			        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			        <?php the_excerpt(); ?>
-			    </div>
+			    <a href="<?php the_permalink(); ?>">
+					<div class="item item__block">
+					    <figure><img src="<?php the_field('section_icon'); ?>" alt="<?php the_title(); ?>"></figure>
+					    <h3><?php the_title(); ?></h3>
+					    <?php the_excerpt(); ?>
+					</div>
+				</a>
 			<?php endforeach; ?>
 		</div>
 	</div>

@@ -3,7 +3,7 @@
 	width: 100%;
 	padding: em(10);
 	@include desktop {
-		padding: em(19);
+		padding: em(14);
 	}
 	ul {
 		padding: 0;
@@ -13,7 +13,7 @@
 			font-family: $book;
 			font-size: em(14);
 			@include desktop {
-				font-size: em(18);
+				font-size: em(15);
 			}
 			.sep {
 				display: inline-block;
@@ -21,8 +21,7 @@
 				margin: 0 em(10); 
 			}
 			a {
-				color: $dblue;
-				font-family: $bold;
+				color: $txtgrey;
 			}
 		}
 	}

@@ -71,6 +71,55 @@
 					text-transform: uppercase;
 				}
 			}
+			.bottom-ctas {
+				text-align: center;
+				ul{
+					display: inline-block;
+					padding: 0;
+					max-width: em(482); 
+					margin: em(10);
+					text-align: center;
+					@include desktop {
+						margin: 0;
+					}
+					li {
+						display: inline-block;
+						width: 40%;
+						@include desktop {
+							width: inherit;
+						}
+						a { 
+							display: block;
+							padding: em(20);
+							font-size: em(10);
+							padding: em(16) em(5);
+							font-family: $bold;
+							text-align: center;
+							text-transform: uppercase;
+							@include desktop {
+								padding: em(13) em(17);
+								font-size: em(14);
+							}
+							&:hover {
+								opacity: 0.5;
+							}
+						}
+						&:first-child {
+							a {
+								background-color: $crygr;
+								color: $dblue;
+							}
+						}
+						&:last-child {
+							margin-left: -6px;
+							a {
+								background-color: $dblue;
+								color: $white;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
