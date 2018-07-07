@@ -41,17 +41,16 @@
 					endif; 
 					wp_reset_query(); 
 				?>
+			</div>
+			<div class="read_more">
+				<a href="#">See all the staff<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+			</div>
 
-				<div class="read_more">
-					<a href="#">See all the staff<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-				</div>
-
-				<div class="bottom-ctas">
-					<ul>
-						<li class="btn-1"><a href="/about-us/out-team/">see all our staff</a></li>
-						<li class="btn-2"><a href="/about-us/our-board-of-directors/">see all our board of directors</a></li>
-					</ul>
-				</div>
+			<div class="bottom-ctas">
+				<ul>
+					<li class="btn-1"><a href="/about-us/out-team/">see all our staff</a></li>
+					<li class="btn-2"><a href="/about-us/our-board-of-directors/">see all our board of directors</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>

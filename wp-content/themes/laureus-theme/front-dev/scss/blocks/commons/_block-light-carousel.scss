@@ -1,5 +1,10 @@
 .cream-wrapper-main {
 	background-color: $cream;
+	h3 {
+		@include mobile {
+			margin-left: em(20);
+		}
+	}
 }
 .beneficiaries-carousel {
 	padding: em(28) 0;
@@ -7,7 +12,7 @@
 		padding: em(78) 0;
 	}
 	h3 {
-		font-size: 30px;
+		font-size: 40px;
 		display: block;
 		color: $dblue;
 		line-height: 1;

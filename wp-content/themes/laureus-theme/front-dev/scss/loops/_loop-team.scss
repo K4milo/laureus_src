@@ -1,6 +1,7 @@
 .team-loop-wrapper {
 	padding: em(40) 0;
 	.team-item {
+		margin-bottom: em(34);
 		@include desktop {
 			margin-bottom: em(64);
 		}
@@ -14,6 +15,9 @@
 			}
 			img {
 				max-width: 100%;
+				@include mobile {
+					width: 100%;
+				}
 			}
 			@include afterTitle($marine);
 		}

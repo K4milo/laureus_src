@@ -104,7 +104,36 @@
 		});
 	}
 
-	// Behavior wrap for hero title
+	// Slider in out team
+
+	// slider
+	var $team_slider = $('.team-wrapper');
+	var settings_slider = {
+			infinite: true,
+			arrows: true,
+			dots: false,
+			slidesToScroll: 1,
+			centerMode: true,
+			speed: 300,
+			slidesToShow: 1
+	  }
+	
+	slick_on_mobile( $team_slider, settings_slider);
+
+	// slick on mobile
+	function slick_on_mobile(slider, settings){
+		$(window).on('load resize', function() {
+			if ($(window).width() > 600) {
+				if (slider.hasClass('slick-initialized')) {
+				  slider.slick('unslick');
+				}
+				return
+			}
+			if (!slider.hasClass('slick-initialized')) {
+				return slider.slick(settings);
+			}
+		});
+	};
 	
 	// Team Script
 	var team_items = $('.team-wrapper .team-item');

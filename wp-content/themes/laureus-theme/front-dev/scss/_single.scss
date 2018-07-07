@@ -12,7 +12,7 @@
 	}
 
 	.team-single {
-		padding: em(40) 0;
+		padding: em(40) em(15);
 		.team-item {
 			@include desktop {
 				margin-bottom: em(64);

@@ -17,7 +17,7 @@
 	  ?>
 	</div>
 	<div class="footer-section secondary-menu">
-		<a href="/donate" class="green-btn">Donate</a>
+		<a href="#" class="green-btn">Donate</a>
 	</div>
 </footer>
 <?php wp_footer(); ?>

@@ -23,7 +23,7 @@
 			margin-bottom: 30px;
 			position: relative;
 			text-align: left;
-			font-size: 60px;
+			font-size: 40px;
 			@include desktop {
 				position: absolute;
 				bottom: 0;
@@ -44,21 +44,7 @@
 					display: block;
 				}
 			}
-			&::after {
-				content: "";
-				display: block;
-				width: 104px;
-				height: 6px;
-				background-color: $marine;
-				position: absolute;
-				bottom: 0;
-				left: 50%;
-				margin-left: -52px;
-				@include desktop {
-					left: 0;
-					margin-left: 0;
-				}
-			}
+			@include afterTitle($marine);
 		}
 	}
 }

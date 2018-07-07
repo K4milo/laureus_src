@@ -37,9 +37,8 @@
 				padding-bottom: 20px;
 				margin-bottom: 30px;
 				position: relative;
-				text-align: center;
+				text-align: left;
 				@include desktop {
-					text-align: left;
 					font-size: 35px;
 				}
 				@include afterTitle($marine);
@@ -50,7 +49,11 @@
 			}
 
 			a {
+				@include desktop {
+					margin: 0;
+				}
 				@include green-btn;
+				margin: em(10);
 			}
 
 			ul {

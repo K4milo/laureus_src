@@ -16,13 +16,20 @@
 			box-shadow: 0 0 em(10) $lgrey;
 			text-align: left;
 			padding: 0 em(40) em(10);
-			width: em(343);
+			max-width: em(343);
+			width: 80%;
 			height: auto;
 			@include desktop {
 				padding: 0 em(40) em(10);
 				margin: 0 em(40);
+				max-width: em(443);
 				width: em(443);
 				height: em(443);
+			}
+			@include tablet {
+				margin: 0 em(20);
+				max-width: em(300);
+				height: em(366);
 			}
 			figure {
 				margin: em(17) 0;
@@ -45,11 +52,10 @@
 				padding-bottom: 20px;
 				margin-bottom: 30px;
 				position: relative;
-				text-align: center;
 				color: $dblue;
+				text-align: left;
 				translate: all 0.3s;
 				@include desktop {
-					text-align: left;
 					font-size: 45px;
 				}
 				@include afterTitle($marine);
@@ -61,8 +67,11 @@
 				}
 			}
 			p {
-				font-size: em(20);
+				font-size: em(18);
 				color: $txtgrey;
+				@include desktop {
+					font-size: em(20);
+				}
 			}
 		}
 	}

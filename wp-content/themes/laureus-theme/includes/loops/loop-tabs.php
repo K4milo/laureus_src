@@ -26,7 +26,7 @@
 
 						?>
 						<div class="news-item item__<?php echo $counter; ?>">
-							<figure class="thumb" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')"></figure>
+							<figure class="thumb" style="background-image: url('<?php the_post_thumbnail_url('large'); ?>')"></figure>
 							<div class="content-wrapper">
 								<h4><?php the_title();?></h4>
 								<?php the_excerpt();?>
